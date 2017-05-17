@@ -351,4 +351,13 @@
 <div class="button-bottom-box neopraxis-flex-column">
   <button type="" class="white-text neopraxis-font-montserrat-regular memberships-button inline-block cursor-pointer letter-spacing-dot-six hover-green">SOLICITAR INFORMACIÓN</button>
 </div>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript">
+	$('.memberships-slick').slick({
+		infinite: true,
+		nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+		prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+	});
+</script>
 {% endblock %}

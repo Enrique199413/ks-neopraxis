@@ -11,13 +11,15 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		{# Customise the stylesheet for your site by editing /public/styles/site.sass #}
-		<link href="/styles/site.css" rel="stylesheet">
+		<link href="/styles/min.css" rel="stylesheet">
 
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
 		{% if user and user.canAccessKeystone %}
 			<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
 		{% endif %}
-
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<link rel='stylesheet' href='https://cdn.rawgit.com/jonsuh/hamburgers/e8cd462c/dist/hamburgers.css'>
+		<script src="/js/index.js"></script>
 		{# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		   Safely remove this block if you are not targeting IE8 #}
 
@@ -31,81 +33,82 @@
 
 		{# HEADER #}
 		{% if section == 'index' or section == 'workPlaces'%}
-			<nav class="neopraxis-navbar" id="neopraxisNavbar">
-		{% else %}
+
+		<nav class="neopraxis-navbar" id="neopraxisNavbar">
+			{% else %}
 			<nav class="neopraxis-navbar" id="neopraxisNavbarSite">
-		{% endif %}
-			<button class="hamburger hamburger--collapse" type="button" id="neopraxis-hamburger-menu">
-			<span class="hamburger-box">
-			  <span class="hamburger-inner"></span>
-			</span>
-			</button>
-			<a class="navbar-brand" href="./">
-				<img src="/images/icons/neopraxis-logo-png@3x.png" class="fitLogo" id="fit-logo">
-			</a>
-			<ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar">
-				{% if section == 'index' %}
-				<li class="neopraxis-font-montserrat-regular active">
-					{% else %}
-				<li class="neopraxis-font-montserrat-regular">
-					{% endif%}
-					<a href="/" class="no-padding-nav">Inicio</a>
-				</li>
-				{% if section == 'services' %}
-				<li class="neopraxis-font-montserrat-regular active">
-					{% else %}
-				<li class="neopraxis-font-montserrat-regular">
-					{% endif %}
-					<a href="/services" class="no-padding-nav">Servicios</a>
-				</li>
-				{% if section == 'memberships' %}
-				<li class="neopraxis-font-montserrat-regular active">
-					{% else %}
-				<li class="neopraxis-font-montserrat-regular">
-					{% endif %}
-					<a href="/memberships" class="no-padding-nav">Membresías</a>
-				</li>
-				{% if section == 'tools' %}
-				<li class="neopraxis-font-montserrat-regular active">
-					{% else %}
-				<li class="neopraxis-font-montserrat-regular">
-					{% endif %}
-					<a href="/tools" class="no-padding-nav">Herramientas</a>
-				</li>
-				{% if section == 'blog' %}
-				<li class="neopraxis-font-montserrat-regular active">
-					{% else %}
-				<li class="neopraxis-font-montserrat-regular">
-					{% endif %}
-					<a href="/blog" class="no-padding-nav">Blog</a>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar-right">
-				{% if section == 'register' %}
-				<li class="neopraxis-font-montserrat-regular navbar-register-button right-item-nav active">
-					{% else %}
-				<li class="neopraxis-font-montserrat-regular navbar-register-button right-item-nav">
-					{% endif %}
-					<a href="/register">
-						<div class="inline-block navbar-register-button-box">
-							<p class="no-margin-text register-button-text white-text neopraxis-font-montserrat-regular">Registro</p>
-						</div>
-					</a>
-				</li>
-				{% if section == 'login' %}
-				<li class="navbar-padding neopraxis-font-montserrat-regular active right-item-nav">
-					{% else %}
-				<li class="navbar-padding neopraxis-font-montserrat-regular right-item-nav">
-					{% endif %}
-					<a href="/login">Iniciar sesión</a>
-				</li>
-			</ul>
-			<div hidden="" class="neopraxis-show-in-movil">
-				<a class="neopraxis-center-flex" href="./">
-					<img src="/images/icons/neopraxis-logo-png@3x.png" class="neopraxis-logo-comparative">
+				{% endif %}
+				<button class="hamburger hamburger--collapse" type="button" id="neopraxis-hamburger-menu">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+				</button>
+				<a class="navbar-brand" href="/">
+					<img src="/images/icons/neopraxis-logo-png@3x.png" class="fitLogo" id="fit-logo">
 				</a>
-			</div>
-		</nav>
+				<ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar">
+					{% if section == 'index' %}
+					<li class="neopraxis-font-montserrat-regular active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular">
+						{% endif%}
+						<a href="/" class="">Inicio</a>
+					</li>
+					{% if section == 'services' %}
+					<li class="neopraxis-font-montserrat-regular active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular">
+						{% endif %}
+						<a href="/services" class="">Servicios</a>
+					</li>
+					{% if section == 'memberships' %}
+					<li class="neopraxis-font-montserrat-regular active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular">
+						{% endif %}
+						<a href="/memberships" class="">Membresías</a>
+					</li>
+					{% if section == 'tools' %}
+					<li class="neopraxis-font-montserrat-regular active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular">
+						{% endif %}
+						<a href="/tools" class="">Herramientas</a>
+					</li>
+					{% if section == 'blog' %}
+					<li class="neopraxis-font-montserrat-regular active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular">
+						{% endif %}
+						<a href="/blog" class="">Blog</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar-right">
+					{% if section == 'register' %}
+					<li class="neopraxis-font-montserrat-regular navbar-register-button right-item-nav active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular navbar-register-button right-item-nav">
+						{% endif %}
+						<a href="/register">
+							<div class="inline-block navbar-register-button-box">
+								<p class="no-margin-text register-button-text white-text neopraxis-font-montserrat-regular">Registro</p>
+							</div>
+						</a>
+					</li>
+					{% if section == 'login' %}
+					<li class="navbar-padding neopraxis-font-montserrat-regular active right-item-nav">
+						{% else %}
+					<li class="navbar-padding neopraxis-font-montserrat-regular right-item-nav">
+						{% endif %}
+						<a href="/login">Iniciar sesión</a>
+					</li>
+				</ul>
+				<div hidden="" class="neopraxis-show-in-movil">
+					<a class="neopraxis-center-flex" href="/">
+						<img src="/images/icons/neopraxis-logo-png@3x.png" class="neopraxis-logo-comparative">
+					</a>
+				</div>
+			</nav>
 
 		{# BODY #}
 		<div id="body">
@@ -126,52 +129,99 @@
 
 
 		{# FOOTER #}
-		<footer class="site-footer neopraxis-flex-column">
-			<img src="/images/icons/neopraxis-logo-png-blanco@3x.png" alt="" class="footer-logo">
-			<div class="neopraxis-flex-row footer-links-container">
-				<div class="links-first-section">
-					<a href="/aboutUs" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Nosotros</p>
-					</a>
-					<a href="/contact" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Contacto</p>
-					</a>
-					<a href="/faq" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Faq's</p>
-					</a>
-					<a href="/community" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Comunidad</p>
-					</a>
-				</div>
-				<div class="links-second-section">
-					<a href="/workPlaces" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Espacios de trabajo</p>
-					</a>
-					<a href="/offices" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">consultorios</p>
-					</a>
-					<a href="/memberships" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Membresías</p>
-					</a>
-					<a href="/tools" class="footer-link">
-						<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Herramientas</p>
-					</a>
-				</div>
-				<div class="newsletter-box">
-					<input type="text" name="" value="" placeholder="newsletter" class="newsletter-input neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six">
-					<div class="footer-share-box inline-block">
-						<img src="/images/icons/facebook-white.png" alt="" class="footer-share-icon">
-						<img src="/images/icons/twitter-white.png" alt="" class="footer-share-icon">
-						<img src="/images/icons/twitter-white.png" alt="" class="footer-share-icon last">
+				<div id="freeTrialModal" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content cierralo-flex-colum">
+						<div class="modal-close-btn-container cursos-pointer">
+							<span class="close"><img src="/images/icons/close-modal.png" class="close-modal-img"></span>
+						</div>
+						<div class="modal-header neopraxis-flex-column">
+							<div class="modal-title-box">
+								<p class="modal-title no-margin-text slate-green-text letter-spacing-dot-two inline-block neopraxis-font-myriadpro-regular">Prueba un consultorio de </p>
+								<img src="/images/icons/neopraxis-logo-png@3x.png" class="modal-title-logo inline-block">
+								<p class="modal-title no-margin-text slate-green-text letter-spacing-dot-two inline-block neopraxis-font-myriadpro-regular">gratis</p>
+							</div>
+							<div class="modal-gold-divider"></div>
+						</div>
+						<div class="modal-body neopraxis-flex-column">
+							<p class="modal-subtitle no-margin-text warm-grey-text letter-spacing-dot-one neopraxis-font-myriadpro-regular">Llena tus datos y te contactaremos lo antes posible para tu prueba gratuita</p>
+							<form action="" method="get" accept-charset="utf-8">
+								<div class="contact-body-modal-container neopraxis-flex-column">
+									<div class="contact-input-box landing">
+										<input type="text" name="" value="" placeholder="Nombre" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'">
+									</div>
+									<div class="contact-input-box landing">
+										<input type="text" name="" value="" placeholder="Correo electrónico" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico'">
+									</div>
+									<div class="contact-input-box landing">
+										<input type="text" name="" value="" placeholder="Teléfono/Celular" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Teléfono/Celular'">
+									</div>
+									<div class="contact-input-box-textarea">
+										<textarea name="" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
+									</div>
+									<div class="contact-checkbox-box neopraxis-flex-row">
+										<input type="checkbox" name="email" value="" class="contact-checkbox inline-block cursor-pointer">
+										<p class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por correo</p>
+									</div>
+									<div class="contact-checkbox-box neopraxis-flex-row">
+										<input type="checkbox" name="phone" value="" class="contact-checkbox inline-block cursor-pointer">
+										<p class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por teléfono</p>
+									</div>
+									<div class="contact-last-button-container neopraxis-flex-column">
+										<button type="" class="white-text neopraxis-font-montserrat-regular contact-btn cursor-pointer hover-green letter-spacing-dot-six">ENVIAR</button>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
-					<button type="" class="float-left white-text neopraxis-font-montserrat-regular newsletter-btn inline-block cursor-pointer letter-spacing-dot-six hover-green">PRUÉBALO GRATIS</button>
 				</div>
-			</div>
-			<p class="white-text copyright-text neopraxis-font-myriadpro-light letter-spacing-dot-six no-margin-text">Copyright Neopraxis 2017 All rights reserved</p>
-		</footer>
+				<footer class="site-footer neopraxis-flex-column">
+					<img src="/images/icons/neopraxis-logo-png-blanco@3x.png" alt="" class="footer-logo">
+					<div class="neopraxis-flex-row footer-links-container">
+						<div class="links-first-section">
+							<a href="/aboutUs" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Nosotros</p>
+							</a>
+							<a href="/contact" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Contacto</p>
+							</a>
+							<a href="/faq" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Faq's</p>
+							</a>
+							<a href="/community" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Comunidad</p>
+							</a>
+						</div>
+						<div class="links-second-section">
+							<a href="/workPlaces" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Espacios de trabajo</p>
+							</a>
+							<a href="/offices" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">consultorios</p>
+							</a>
+							<a href="/memberships" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Membresías</p>
+							</a>
+							<a href="/tools" class="footer-link click-scrolling">
+								<p class="white-text uppercase neopraxis-font-montserrat-regular letter-spacing-dot-six footer-link-text no-margin-text">Herramientas</p>
+							</a>
+						</div>
+						<div class="newsletter-box">
+							<input type="text" name="" value="" placeholder="newsletter" class="newsletter-input neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'newsletter'">
+							<div class="footer-share-box inline-block">
+								<img src="/images/icons/facebook-white.png" alt="" class="footer-share-icon">
+								<img src="/images/icons/twitter-white.png" alt="" class="footer-share-icon">
+								<img src="/images/icons/instagram.png" alt="" class="footer-share-icon last">
+							</div>
+							<button type="" id="footerBtn" class="float-left white-text neopraxis-font-montserrat-regular newsletter-btn inline-block cursor-pointer letter-spacing-dot-six hover-green">PRUÉBALO GRATIS</button>
+						</div>
+					</div>
+					<p class="white-text copyright-text neopraxis-font-myriadpro-light letter-spacing-dot-six no-margin-text">Copyright Neopraxis 2017 All rights reserved</p>
+				</footer>
 
 
-		{# JAVASCRIPT #}
+
+				{# JAVASCRIPT #}
 
 		{# jQuery 1.11.3 is included by default, and required by both Bootstrap
 			and the KeystoneJS Content Editor. If you are not targeting IE8,
