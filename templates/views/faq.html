@@ -1,0 +1,156 @@
+{% extends "layouts/default.html" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block content %}
+<div class="faq-header neopraxis-flex-column">
+  <div class="faq-header-title-box">
+    <h1 class="faq-header-title neopraxis-font-montserrat-bold charcoal-text letter-spacing-dot-two no-margin-text">Preguntas frecuentes</h1>
+    <div class="faq-header-gold-divider"></div>
+  </div>
+</div>
+<div class="faq-body">
+  <div class="neopraxis-flex-row faq-body-container">
+    <div class="faq-buttons-container">
+      <div class="faq-button-box neopraxis-flex-row cursor-pointer active" id="reservations">
+        <p class="letter-spacing-dot-one no-margin-text faq-buttont-text neopraxis-font-montserrat-regular">Reservas</p>
+      </div>
+      <div class="faq-button-box neopraxis-flex-row cursor-pointer" id="memberships">
+        <p class="letter-spacing-dot-one no-margin-text faq-buttont-text neopraxis-font-montserrat-regular">Membresías</p>
+      </div>
+      <div class="faq-button-box neopraxis-flex-row cursor-pointer" id="paids">
+        <p class="letter-spacing-dot-one no-margin-text faq-buttont-text neopraxis-font-montserrat-regular">Pagos</p>
+      </div>
+      <div class="faq-button-box neopraxis-flex-row cursor-pointer" id="spaceUses">
+        <p class="letter-spacing-dot-one no-margin-text faq-buttont-text neopraxis-font-montserrat-regular">Reservación y uso de espacios</p>
+      </div>
+      <div class="faq-button-box neopraxis-flex-row cursor-pointer" id="tests">
+        <p class="letter-spacing-dot-one no-margin-text faq-buttont-text neopraxis-font-montserrat-regular">Pruebas</p>
+      </div>
+    </div>
+    <div class="faq-text-container">
+      <div class="reservations faq-box active">
+        <p class="faq-title no-margin-text neopraxis-font-montserrat-regular letter-spacing-dot-two charcoal-text">Reservas</p>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Cúantas reservas puedo hacer?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">No hay un mínimo o máximo de reservas que puedas realizar</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Cuál es la vigencia de las reservas pagadas de mi membresía?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Se pueden utilizar únicamente durante el mes que fueron adquiridos.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Soy miembro Neo o Exer y necesito reservar más espacios de las que incluye mi plan</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Puedes hacer reservas extras en cualquier momento y si se convierte en algo fijo, puedes aumentar las reservas incluidas a</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Me cancelo mi paciente ¿qué pasa con mi reservación?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Si cancelas el espacio con 24 horas de anticipación no se registra como utilizado y no se cobra.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿y si no? Si no logras cancelar la reservación 24 horas antes:</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Miembros Intro: se registrará como utilizado y se deberá cubrir el pago correspondiente.<br>
+          Miembros Neo y Exer: puedes volver a utilizar ese hora durante el mes de vigencia</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Los precios ya incluyen IVA? ¿dónde puedo consultar mi factura?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Si, los precios por reserva y de la anualidad ya incluyen IVA. <br>Al final del mes recibirás tu factura directo a tu correo electrónico.</p>
+        </div>
+      </div>
+      <div class="memberships faq-box">
+        <p class="faq-title no-margin-text neopraxis-font-montserrat-regular letter-spacing-dot-two charcoal-text">Membresía</p>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Puedo pasar a conocer las instalaciones o debo hacer una cita para realizar una visita?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Te recomendamos programarla con anticipación, así podemos asegurar la disponibilidad de nuestro equipo y enfocarnos en ayudarte.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Puedo cambiar de membresía si mi consulta crece?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Claro, nuestra oferta esta diseñada para crecer conforme tu creces.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>No soy Psicólogo, ¿Puedo ser miembro?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Claro, otros profesionistas de la salud se pueden ver beneficiados también de utilizar nuestros espacios y enriquecer la comunidad. Llámanos o déjanos tus datos para ponerte en contacto con alguien del equipo de NeoPraxis para que nos platiques más de tu trabajo.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Necesito un servicio que no veo en la lista ¿me lo pueden ofrecer?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Claro, si hubiera un servicio en particular que no ofrecemos actualmente y que tu necesitas podemos platicarlo.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Actualmente soy miembro de NeoPraxis y me encanta mi espacio, ¿dan recompensas por referir a un amigo?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Definitivamente, por ayudar a crecer la comunidad se abonaran $200 pesos a tu cuenta que podrás utilizar para reservar un espacio por cada miembro nuevo que venga referido por ti.</p>
+        </div>
+      </div>
+      <div class="paids faq-box">
+        <p class="faq-title no-margin-text neopraxis-font-montserrat-regular letter-spacing-dot-two charcoal-text">Pagos</p>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¡Estoy listo para regístrame! ¿cuáles son mis opciones de pago?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Aceptamos: efectivo, tarjeta de debito o crédito, depósito bancario o transferencia electrónica.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Se requiere un depósito inicial?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">No, el único pago inicial que debes realizar es la anualidad.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Tengo una Membresía Intro, ¿para reservar un espacio tengo que pagarlo primero?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">En caso de tener un pago pendiente durante un mes, se restringirá el acceso a la plataforma de reservación y después de dos meses de adeudo las reservaciones recurrentes agendadas se cancelaran hasta ponerse al corriente.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Tengo una Membresía Neo o Exer, ¿qué pasa si me atraso en el pago mensual?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">En caso de que no se liquide la factura durante el mes al que refiere, se restringirá el acceso a la plataforma de reservación y después de dos meses las reservaciones recurrentes agendadas se cancelaran hasta ponerse al corriente. utilizar el espacio. plazo se agregará un 10% al cobro de la factura pendiente.</p>
+        </div>
+      </div>
+      <div class="spaceUses faq-box">
+        <p class="faq-title no-margin-text neopraxis-font-montserrat-regular letter-spacing-dot-two charcoal-text">Reservación y uso de espacios</p>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Puedo reservar diferentes espacios?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Si, puedes reservar los espacios que quieras en el día y la hora que quieras.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Puedo agendar reservaciones recurrentes en un espacio?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Si, puedes programar una reservación con recurrencia semanal, quincenal o mensual. Así siempre tendrás disponible el espacio que deseas.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Cuál es el horario en que puedo utilizar los espacios?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">De lunes a viernes puede reservar desde las 9:00 y programar la última a las 21:00 hrs. <br>Los sábados desde las 8:00 hasta las 18:00 hrs.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Tienen consultorios para niños?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Por el momento no, los espacios de NeoPraxis están diseñados para ser utilizados por adolescentes y adultos exclusivamente. <br>Cualquier menor que acuda con algún paciente debe esperar en el área de recepción acompañado por un adulto que este a su cargo.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Cuántos consultorios son?¿Cómo son los consultorios?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Actualmente tenemos disponibles X consultorios, todos varían ligeramente en su distribución. En general todos pueden ser utilizados para tener sesiones individuales, de pareja o de familia. En todos se pueden aplicar pruebas psicológicas y utilizar el sillón como diván.</p>
+        </div>
+      </div>
+      <div class="tests faq-box">
+        <p class="faq-title no-margin-text neopraxis-font-montserrat-regular letter-spacing-dot-two charcoal-text">Pruebas</p>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Cuáles son las pruebas que tienen disponibles en el catálogo?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">En su mayoría son pruebas de uso clínico, exclusivamente para adolescentes y adultos. Revisa la lista completa aquí.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Tiene un costo extra utilizarlas?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Si, de $70 MXN. Si eres miembro Neo se incluye un uso al mes y si eres Exer se incluyen 2.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿En que horario la puedo reservar?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Las pruebas se pueden utilizar exclusivamente durante el tiempo que tengas reservado un espacio dentro de los consultorios.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Me incluye el protocolo y manual de revisión?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Si, todo lo que necesitas para aplicarla y revisarla. Algunas incluyen protocolos y manuales de revisión, algunos en formato físico y otras digital.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>¿Cómo puedo acceder a los protocolos y manuales de revisión digitales?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Te proporcionaremos una computadora o tablet con uso exclusivo de revisión de pruebas. Podrás disponer de este equipo durante el tiempo y dentro del consultorio que tengas reservado.</p>
+        </div>
+        <div class="ask-box">
+          <p class="ask-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text"><b>Necesito una prueba que no se incluye en el catálogo ¿Qué hago?</b></p>
+          <p class="answer-text no-margin-text neopraxis-font-myriadpro-regular greyish-brown-text">Platícanos que prueba te gustaría que se incluyera en el catalogo, lo actualizamos constantemente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

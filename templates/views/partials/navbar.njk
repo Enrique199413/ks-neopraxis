@@ -1,0 +1,77 @@
+{% if section == 'index' or section == 'workPlaces'%}
+
+  <nav class="neopraxis-navbar" id="neopraxisNavbar">
+{% else %}
+  <nav class="neopraxis-navbar" id="neopraxisNavbarSite">
+{% endif %}
+  <button class="hamburger hamburger--collapse" type="button" id="neopraxis-hamburger-menu">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <a class="navbar-brand" href="./">
+    <img src="./public/images/icons/neopraxis-logo-png@3x.png" class="fitLogo" id="fit-logo">
+  </a>
+  <ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar">
+      {% if section == 'index' %}
+        <li class="neopraxis-font-montserrat-regular active">
+      {% else %}
+        <li class="neopraxis-font-montserrat-regular">
+      {% endif%}
+        <a href="./index.html" class="no-padding-nav">Inicio</a>
+      </li>
+      {% if section == 'services' %}
+        <li class="neopraxis-font-montserrat-regular active">
+      {% else %}
+        <li class="neopraxis-font-montserrat-regular">
+      {% endif %}
+        <a href="./services.html" class="no-padding-nav">Servicios</a>
+      </li>
+      {% if section == 'memberships' %}
+        <li class="neopraxis-font-montserrat-regular active">
+      {% else %}
+        <li class="neopraxis-font-montserrat-regular">
+      {% endif %}
+        <a href="./memberships.html" class="no-padding-nav">Membresías</a>
+      </li>
+      {% if section == 'tools' %}
+        <li class="neopraxis-font-montserrat-regular active">
+      {% else %}
+        <li class="neopraxis-font-montserrat-regular">
+      {% endif %}
+        <a href="./tools.html" class="no-padding-nav">Herramientas</a>
+      </li>
+      {% if section == 'blog' %}
+        <li class="neopraxis-font-montserrat-regular active">
+      {% else %}
+        <li class="neopraxis-font-montserrat-regular">
+      {% endif %}
+        <a href="./blog.html" class="no-padding-nav">Blog</a>
+      </li>
+  </ul>
+    <ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar-right">
+      {% if section == 'register' %}
+        <li class="neopraxis-font-montserrat-regular navbar-register-button right-item-nav active">
+      {% else %}
+        <li class="neopraxis-font-montserrat-regular navbar-register-button right-item-nav">
+      {% endif %}
+        <a href="./register.html">
+          <div class="inline-block navbar-register-button-box">
+            <p class="no-margin-text register-button-text white-text neopraxis-font-montserrat-regular">Registro</p>
+          </div>
+        </a>
+      </li>
+      {% if section == 'login' %}
+        <li class="navbar-padding neopraxis-font-montserrat-regular active right-item-nav">
+      {% else %}
+        <li class="navbar-padding neopraxis-font-montserrat-regular right-item-nav">
+      {% endif %}
+        <a href="./login.html">Iniciar sesión</a>
+      </li>
+    </ul>
+    <div hidden="" class="neopraxis-show-in-movil">
+      <a class="neopraxis-center-flex" href="./">
+        <img src="./img/icons/neopraxis-logo-png@3x.png" class="neopraxis-logo-comparative">
+      </a>
+    </div>
+</nav>

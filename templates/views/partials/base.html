@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {% block meta %}{% endblock %}
+  {% block extra_css %}{% endblock %}
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  <link rel="manifest" href="./img/manifest.json">
+  <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <link rel='stylesheet' href='https://cdn.rawgit.com/jonsuh/hamburgers/e8cd462c/dist/hamburgers.css'>
+  <title>{% if section != 'index' %}{% block title %}{% endblock %} - {% endif %}{{ projectName }}</title>
+</head>
+<body id="body">
+  <div id="page">
+    {% include 'partials/navbar.njk' %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    {% include 'partials/footer.njk' %}
+  </div>
+  {% block js_libs_config %}
+  {% endblock %}
+  <script src="./js/{{ projectFilesName }}.libs.js"></script>
+  {% block js_project_config %}
+  {% endblock %}
+  <script src="./js/{{ projectFilesName }}.js"></script>
+  {% block js_inline %}
+  {% if section == 'index' %}
+    <script src="/js/index.js"></script>
+  {% elif section == 'login'%}
+    <script src="/js/index.js"></script>
+  {% elif section == 'workPlaces'%}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+      $('.worksplace-carousel').slick({
+        nextArrow: '<img class="worksplace-next cursor-pointer" src="./img/icons/flecha-verde-right.png"></img>',
+        prevArrow: '<img class="worksplace-prev cursor-pointer" src="./img/icons/flecha-verde-left.png"></img>',
+      });
+    </script>
+  {% elif section == 'offices'%}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+      $('#green-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#blue-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#red-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#mint-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#orange-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#beige-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#grey-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#yellow-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#purple-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+      $('#violet-slider').slick({
+        nextArrow: '<img class="offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
+        prevArrow: '<img class="offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+      });
+    </script>
+  {% endif %}
+  {% endblock %}
+</body>
+</html>
