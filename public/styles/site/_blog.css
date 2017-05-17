@@ -30,6 +30,7 @@
 }
 .blog-list-container {
   align-items: flex-start !important;
+  padding-bottom: 71px;
 }
 .post-list-date {
   font-size: 10px;
@@ -94,6 +95,7 @@
   padding-left: 20px;
   outline: none;
   border: solid 1px #e5e5e5;
+  font-size: 16px;
 }
 .send-newsletter-btn {
   background-color: #6b806c;
@@ -160,6 +162,7 @@
 .post-template-padding {
   padding-top: 60px;
   align-items: flex-start !important;
+  padding-bottom: 60px;
 }
 .post-newsletter-container {
   padding-top: 0px;
