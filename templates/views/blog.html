@@ -1,125 +1,77 @@
 {% extends "layouts/default.html" %}
 
 {% macro blogPost(post) %}
-<div class="post" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
-<h2>
-	<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
-</h2>
-<p class="lead text-muted">Posted
-	{% if post.publishedDate %}
-	<br>on {{ post._.publishedDate.format("MMMM Do, YYYY") }}
+	<div class="post-list-box post" data-ks-editable="editable(user, { list: " Post ", id: post.id })>
+	{% if post.image.exists %}
+	<a href="/blog/post/{{ post.slug }}" class="post-link">
+		<div class="post-list-image" style="background-image:url({{post.image.url}});"></div>
+	</a>
 	{% endif %}
-	{% if post.categories and post.categories.length %}
-	<br>in {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
-	{% endif %}
-	{% if post.author %}
-	<br>by {{ post.author.name.first }}
-	{% endif %}
-</p>
-{% if post.image.exists %}
-<img src="{{ post._.image.fit(160,160) }}" class="img pull-right">
-{% endif %}
-<p>{{ post.content.brief|safe }}</p>
-{% if post.content.extended %}
-<p class="read-more">
-	<a href="/blog/post/{{ post.slug }}">Read more...</a>
-</p>
-{% endif %}
-</div>
-{% endmacro %}
-
-{% block intro %}
-<div class="container">
-	{% set title = ( data.category.name if data.category else "Blog" ) %}
-	<h1>{{ title }}</h1>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			{% if filters.category and not data.category %}
-			<h3 class="text-muted">Invalid Category.</h3>
-			{% else %}
-			{% if data.posts.results.length %}
-			{% if data.posts.totalPages > 1 %}
-			<h4 class="text-weight-normal">
-				Showing
-				<strong>{{ data.posts.first }}</strong>
-				to
-				<strong>{{ data.posts.last }}</strong>
-				of
-				<strong>{{ data.posts.total }}</strong>
-				posts.
-			</h4>
-			{% else %}
-			<h4 class="text-weight-normal">Showing {{ utils.plural(data.posts.results.length, "* post") }}.</h4>
-			{% endif %}
-			<div class="blog">
-				{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
-			</div>
-			{% if data.posts.totalPages > 1 %}
-			<ul class="pagination">
-
-				{% if data.posts.previous %}
-				<li>
-					<a href="?page={{ data.posts.previous }}">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-				</li>
-				{% else %}
-				<li class="disabled">
-					<a href="?page=1">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-				</li>
-				{% endif %}
-
-				{% for p in data.posts.pages %} {% set class = ( "active" if data.posts.currentPage == p else "" ) %}
-				<li class="{{ class }}">
-					{% set page = ( (data.posts.totalPages if i else 1) if p == "..." else p ) %}
-					<a href="?page={{ page }}">{{ p }}</a>
-				</li>
-				{% endfor %}
-
-				{% if data.posts.next %}
-				<li>
-					<a href="?page={{ data.posts.next }}">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</li>
-				{% else %}
-				<li class="disabled">
-					<a href="?page={{ data.posts.totalPages }}">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</li>
-				{% endif %}
-
-			</ul>
-			{% endif %}
-			{% else %}
-			{% if data.category %}
-			<h3 class="text-muted">There are no posts in the category {{ data.category.name }}.</h3>
-			{% else %}
-			<h3 class="text-muted">There are no posts yet.</h3>
-			{% endif %}
-			{% endif %}
-			{% endif %}
-		</div>
-		{% if data.categories.length %}
-		<div class="col-sm-4 col-md-3">
-			<h2>Categories</h2>
-			<div class="list-group" style="margin-top: 70px;">
-				{% set class = ( "active" if not data.category else "" ) %}
-				<a href="/blog" class="{{ class }} list-group-item">All Categories</a>
-				{% for cat in data.categories %} {% set class = ( "active" if data.category and data.category.id == cat.id else "" ) %}
-				<a href="/blog/{{ cat.key }}" class="{{ class }} list-group-item">{{ cat.name }}</a>
-				{% endfor %}
-			</div>
-		</div>
-		{% endif %}
+	<div class="post-list-title-box">
+		<a href="/blog/post/{{ post.slug }}" class="post-link">
+			<p class="post-list-title no-margin-text slate-green-text neopraxis-font-montserrat-bold">{{ post.title }}</p>
+		</a>
 	</div>
+	{% if post.publishedDate %}
+	<div class="post-list-date-box">
+		<p class="post-list-date no-margin-text greyish-brown-three-text neopraxis-font-myriadpro-regular">{{ post.publishedDate }}</p>
+	</div>
+	{% endif %}
+	<div class="post-list-text-box warm-grey-text no-margin-text neopraxis-font-myriadpro-regular letter-spacing-dot-one">
+		{{ post.content.brief|safe }}
+	</div>
+	{% if post.content.extended %}
+	<div class="post-list-link-box">
+		<a href="/blog/post/{{ post.slug }}" class="post-list-link">
+			<p class="post-list-link-text no-margin-text neopraxis-font-myriadpro-regular sandy-brown-text inline-block"><b>Seguir leyendo</b></p>
+		</a>
+	</div>
+	{% endif %}
+	</div>
+{% endmacro %}
+{% block content %}
+<div class="container neopraxis-flex-column">
+	<div class="blog-title-box">
+		<h1 class="no-margin-text neopraxis-font-montserrat-bold letter-spacing-dot-two charcoal-text">Blog</h1>
+	</div>
+	<div class="neopraxis-flex-row blog-list-container">
+		<div class="posts-list-container">
+			{% if data.posts.results.length %}
+				{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+			{% else %}
+			<div class="no-posts-box neopraxis-flex-column">
+				<h3 class="no-posts-text no-margin-text neopraxis-font-montserrat-bold letter-spacing-dot-two slate-green-text">¡Aún no hay publicaciones!</h3>
+			</div>
+			{% endif %}
+		</div>
+		<div class="newsletter-container">
+			<form>
+				<div class="newsletter-form-box">
+					<p class="newsletter-text no-margin-text neopraxis-font-montserrat-regular greyish-brown-text">Suscríbete a nuestro Newsletter</p>
+					<div class="newsletter-input-box">
+						<input type="text" name="" value="" placeholder="" class="newsletter-input neopraxis-font-montserrat-regular greyish-brown-text">
+					</div>
+					<div class="send-newsletter-btn-box">
+						<button type="submit" class="send-newsletter-btn neopraxis-font-montserrat-regular white-text hover-green">ENVIAR</button>
+					</div>
+				</div>
+			</form>
+			<div class="recent-posts-box">
+				<div class="recent-posts-title-box">
+					<p class="recent-posts-title no-margin-text neopraxis-font-montserrat-regular slate-green-text">Lo más reciente</p>
+				</div>
+				<div class="recent-posts-list">
+					{% for post in data.posts.results %}
+					<div class="recent-posts-link-box">
+						<a href="/blog/post/{{ post.slug }}" class="recent-posts-link">
+							<p class="recent-posts-link-text no-margin-text neopraxis-font-myriadpro-regular warm-grey-text inline-block">{{ post.title }}</p>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>
 {% endblock %}
