@@ -1,6 +1,3 @@
-/**
- * Created by enriquelc on 17/05/17.
- */
 var keystone = require('keystone');
 var async = require('async');
 
@@ -21,7 +18,6 @@ exports = module.exports = function (req, res) {
 
 	// Load all categories
 	view.on('init', function (next) {
-
 		keystone.list('PostCategory').model.find().sort('name').exec(function (err, results) {
 
 			if (err || !results.length) {
