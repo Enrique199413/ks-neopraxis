@@ -128,8 +128,8 @@ $(document).ready(function() {
 		$('#myModal').show();
 		$('body').addClass('modal-open');
 		$('.modal-slider').slick({
-			nextArrow: '<img class="modal-offices-next cursor-pointer" src="./img/icons/right-arrow-white.png"></img>',
-			prevArrow: '<img class="modal-offices-prev cursor-pointer" src="./img/icons/left-arrow-white.png"></img>',
+			nextArrow: '<img class="modal-offices-next cursor-pointer" src="/images/icons/right-arrow-white.png"></img>',
+			prevArrow: '<img class="modal-offices-prev cursor-pointer" src="/images/icons/left-arrow-white.png"></img>',
 		});
 	});
 	var galleryModal = document.getElementById('myModal');
