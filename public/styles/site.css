@@ -892,7 +892,7 @@ span.textLogo {
 .about-us-header {
   width: 100%;
   height: 637px;
-  background: url("../img/bitmap@3x.png");
+  background: url("/images/bitmap@3x.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1816,7 +1816,7 @@ body {
   width: 100%;
   height: 437px;
   margin-top: 98px;
-  background: url("../img/group-12@3x.png");
+  background: url("/images/group-12@3x.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3403,7 +3403,7 @@ textarea.contact-input {
 .office-slider-item.green {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-15@3x.png");
+  background: url("/images/group-15@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3413,7 +3413,7 @@ textarea.contact-input {
 .office-slider-item.mint {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-18@3x.png");
+  background: url("/images/group-18@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3423,7 +3423,7 @@ textarea.contact-input {
 .office-slider-item.red {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-21@3x.png");
+  background: url("/images/group-21@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3433,7 +3433,7 @@ textarea.contact-input {
 .office-slider-item.violet {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-22@3x.png");
+  background: url("/images/group-22@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3443,7 +3443,7 @@ textarea.contact-input {
 .office-slider-item.yellow {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-24@3x.png");
+  background: url("/images/group-24@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3453,7 +3453,7 @@ textarea.contact-input {
 .office-slider-item.blue {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-18@3x.png");
+  background: url("/images/group-18@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3463,7 +3463,7 @@ textarea.contact-input {
 .office-slider-item.orange {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-19@3x.png");
+  background: url("/images/group-19@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3473,7 +3473,7 @@ textarea.contact-input {
 .office-slider-item.beige {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-20@3x.png");
+  background: url("/images/group-20@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3483,7 +3483,7 @@ textarea.contact-input {
 .office-slider-item.grey {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-23@3x.png");
+  background: url("/images/group-23@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3493,7 +3493,7 @@ textarea.contact-input {
 .office-slider-item.purple {
   width: 393px;
   height: 261px !important;
-  background: url("../img/group-25@3x.png");
+  background: url("/images/group-25@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3826,7 +3826,7 @@ textarea.contact-input {
 .worksplace-header {
   width: 100%;
   height: 670px;
-  background: url("../img/bitmap@3x3.png");
+  background: url("/images/bitmap@3x3.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3899,7 +3899,7 @@ textarea.contact-input {
   width: 65%;
   height: 351px;
   margin-left: -11%;
-  background: url("../img/group@3x.png");
+  background: url("/images/group@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3913,7 +3913,7 @@ textarea.contact-input {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: url("../img/group-2@3x2.png");
+  background: url("/images/group-2@3x2.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3973,7 +3973,7 @@ textarea.contact-input {
   height: 389px;
   margin-left: 72px;
   margin-top: 82px;
-  background: url("../img/bitmap@3x4.png");
+  background: url("/images/bitmap@3x4.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3986,7 +3986,7 @@ textarea.contact-input {
   position: absolute;
   right: 61px;
   top: 97px;
-  background: url("../img/bitmap@3x5.png");
+  background: url("/images/bitmap@3x5.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -4025,28 +4025,28 @@ textarea.contact-input {
   height: 401px !important;
 }
 .worksplace-parallax-gallery-item.first {
-  background: url("../img/bitmap@3x5.png");
+  background: url("/images/bitmap@3x5.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 }
 .worksplace-parallax-gallery-item.second {
-  background: url("../img/bitmap@3x4.png");
+  background: url("/images/bitmap@3x4.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 }
 .worksplace-parallax-gallery-item.third {
-  background: url("../img/bitmap@3x.png");
+  background: url("/images/bitmap@3x.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 }
 .worksplace-parallax-gallery-item.fourth {
-  background: url("../img/bitmap@3x3.png");
+  background: url("/images/bitmap@3x3.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
@@ -4079,7 +4079,7 @@ textarea.contact-input {
 .worksplace-last-section-image {
   width: 30%;
   height: 310px;
-  background: url("../img/group-5@3x3.png");
+  background: url("/images/group-5@3x3.png");
   background-attachment: inherit;
   background-repeat: no-repeat;
   background-position: center top;
