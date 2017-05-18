@@ -16,6 +16,7 @@ $('document').ready(function () {
 			data: $('#blogNewsletter').serialize(),
 			success: function () {
 				document.querySelector('#messageNewsletterBlog').innerHTML = 'Gracias por tu suscripción';
+				$('#messageNewsletter').show();
 				setTimeout(function () {
 					document.querySelector('#blogNewsletter').reset();
 					$('#inputNewsletterBlog').show();
@@ -43,6 +44,7 @@ $('document').ready(function () {
 			data: $('#newsletterInput').serialize(),
 			success: function () {
 				document.querySelector('#messageNewsletter').innerHTML = 'Gracias por tu suscripción';
+				$('#messageNewsletter').show();
 				setTimeout(function () {
 					document.querySelector('#newsletterInput').reset();
 					$('#inputText').show();
@@ -58,6 +60,89 @@ $('document').ready(function () {
 					$('#messageNewsletter').hide();
 					document.querySelector('#newsletterInput').reset();
 				}, 2000);
+			},
+		});
+		e.preventDefault();
+	});
+	$('#textForm').hide();
+	$('#textFormTwo').hide();
+	$('#textFormIndex').hide();
+	$('#formFree').on('submit', function (e) {
+		$.ajax({
+			type: 'post',
+			url: '/api/mailgun/sendMail',
+			data: $('#formFree').serialize(),
+			success: function (data) {
+				if (data.error === 'error') {
+					$('#textForm').show();
+					document.querySelector('#textForm').innerHTML = 'Verifica los datos ingresados';
+					setTimeout(function () {
+						document.querySelector('#formFree').reset();
+						$('#textForm').hide();
+						$('#textForm').innerHTML = 'Nos pondremos en contacto contigo, gracias.';
+					}, 2000);
+				} else {
+					document.querySelector('#textForm').innerHTML = 'Nos pondremos en contacto contigo, gracias.';
+					$('#textForm').show();
+					setTimeout(function () {
+						document.querySelector('#formFree').reset();
+						$('#textForm').hide();
+					}, 2000);
+				}
+			},
+		});
+		e.preventDefault();
+	});
+	$('#formFreeTwo').on('submit', function (e) {
+		$.ajax({
+			type: 'post',
+			url: '/api/mailgun/sendMail',
+			data: $('#formFreeTwo').serialize(),
+			success: function (data) {
+				if (data.error === 'error') {
+					document.querySelector('#textFormTwo').innerHTML = 'Verifica los datos ingresados';
+					$('#textFormTwo').show();
+					setTimeout(function () {
+						document.querySelector('#formFreeTwo').reset();
+						$('#textFormTwo').hide();
+						document.querySelector('#textFormTwo').innerHTML = 'Nos pondremos en contacto contigo, gracias.';
+					}, 2000);
+				} else {
+					$('#textFormTwo').show();
+					setTimeout(function () {
+						document.querySelector('#formFreeTwo').reset();
+						$('#textFormTwo').hide();
+					}, 2000);
+				}
+			},
+		});
+		e.preventDefault();
+	});
+	$('#formDataIndex').on('submit', function (e) {
+		$.ajax({
+			type: 'post',
+			url: '/api/mailgun/sendMail',
+			data: $('#formDataIndex').serialize(),
+			success: function (data) {
+				if (data.error === 'error') {
+					document.querySelector('#textFormIndex').innerHTML = 'Verifica los datos ingresados';
+					$('#formDataIndex').hide();
+					$('#textFormIndex').show();
+					setTimeout(function () {
+						document.querySelector('#formDataIndex').reset();
+						$('#textFormIndex').hide();
+						$('#formDataIndex').show();
+						$('#textFormIndex').innerHTML = 'Nos pondremos en contacto contigo, gracias.';
+					}, 2000);
+				} else {
+					$('#textFormIndex').show();
+					$('#formDataIndex').hide();
+					setTimeout(function () {
+						document.querySelector('#formDataIndex').reset();
+						$('#textFormIndex').hide();
+						$('#formDataIndex').show();
+					}, 2000);
+				}
 			},
 		});
 		e.preventDefault();
