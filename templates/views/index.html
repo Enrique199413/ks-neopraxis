@@ -292,28 +292,32 @@
 		</div>
 		<div class="blog-container neopraxis-flex-column">
 			<p class="no-margin-text charcoal-text neopraxis-font-montserrat-bold blog-title letter-spacing-dot-two">Blog</p>
-			<div class="blog-body">
-				<p class="no-margin-text charcoal-text neopraxis-font-montserrat-bold blog-subtitle letter-spacing-dot-two">Lorem ipsum dolor sit amet</p>
-				<p class="neopraxis-font-myriadpro-regular no-margin-text charcoal-text blog-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum… <a class="keep-reading-link">Seguir leyendo</a> </p>
-				<img src="/images/pexels-photo-172748@3x.png" alt="" class="blog-image">
-				<div class="share-container">
-					<a href="" class="share-blog-link">
-						<img src="/images/icons/page-1-copy-4@3x.png" alt="" class="share-blog-icon">
-					</a>
-					<a href="" class="share-blog-link">
-						<img src="/images/icons/twitter-logo-button@3x.png" alt="" class="share-blog-icon">
-					</a>
-					<a href="" class="share-blog-link">
-						<img src="/images/icons/facebook-logo-button@3x.png" alt="" class="share-blog-icon">
-					</a>
-				</div>
-				<div class="more-blog-button-container neopraxis-flex-column">
-					<a href="/blog" class="button-link click-scrolling">
-						<div class="see-more-button-box hover-green">
-							<p class="neopraxis-font-montserrat-regular white-text see-more-btn-text no-margin-text letter-spacing-dot-six">CONOCE MÁS</p>
+			<div class="blog-body" id="blogBody">
+				{% if data.post.length %}
+					{% for post in data.post%}
+						<p class="no-margin-text charcoal-text neopraxis-font-montserrat-bold blog-subtitle letter-spacing-dot-two">{{ post.title }}</p>
+						<p class="neopraxis-font-myriadpro-regular no-margin-text charcoal-text blog-text"> {{ post.content.extended | safe}} <a class="keep-reading-link" href="/blog/post/{{ post.slug }}">Seguir leyendo</a> </p>
+						<img src="{{post.image.secure_url | safe}}" alt="" class="blog-image">
+						<div class="share-container">
+							<a href="" class="share-blog-link">
+								<img src="/images/icons/page-1-copy-4@3x.png" alt="" class="share-blog-icon">
+							</a>
+							<a href="" class="share-blog-link">
+								<img src="/images/icons/twitter-logo-button@3x.png" alt="" class="share-blog-icon">
+							</a>
+							<a href="" class="share-blog-link">
+								<img src="/images/icons/facebook-logo-button@3x.png" alt="" class="share-blog-icon">
+							</a>
 						</div>
-					</a>
-				</div>
+						<div class="more-blog-button-container neopraxis-flex-column">
+							<a href="/blog" class="button-link click-scrolling">
+								<div class="see-more-button-box hover-green">
+									<p class="neopraxis-font-montserrat-regular white-text see-more-btn-text no-margin-text letter-spacing-dot-six">CONOCE MÁS</p>
+								</div>
+							</a>
+						</div>
+					{% endfor %}
+				{% endif %}
 			</div>
 		</div>
 		<div class="blog-divider">
