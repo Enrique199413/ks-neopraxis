@@ -15,12 +15,13 @@
 
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
 		{% if user and user.canAccessKeystone %}
-			<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
+		<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
 		{% endif %}
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<link rel='stylesheet' href='https://cdn.rawgit.com/jonsuh/hamburgers/e8cd462c/dist/hamburgers.css'>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src="/js/index.js"></script>
+		<script src="/js/blick.utils.js"></script>
 		{# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		   Safely remove this block if you are not targeting IE8 #}
 
@@ -273,35 +274,6 @@
 				$('#violet-slider').slick({
 					nextArrow: '<img class="offices-next cursor-pointer" src="/images/icons/right-arrow-white.png"></img>',
 					prevArrow: '<img class="offices-prev cursor-pointer" src="/images/icons/left-arrow-white.png"></img>',
-				});
-				// AJAX PETITION
-				$('#messageNewsletter').hide();
-				$('#newsletterInput').on('submit',function (e) {
-					$('#inputText').hide();
-					$.ajax({
-						type: 'post',
-						url: '/api/mailchimp/newsletter',
-						data: $('#newsletterInput').serialize(),
-						success: function () {
-							document.querySelector('#messageNewsletter').innerHTML = 'Gracias por tu suscripción';
-							setTimeout(function () {
-								document.querySelector('#newsletterInput').reset();	
-							  	$('#inputText').show();
-								$('#messageNewsletter').hide();
-							}, 2000);
-						},
-						error: function (error) {
-							document.querySelector('#messageNewsletter').innerHTML = error.status === 403 ? 'Ya estas registrado' : 'Verifica el correo';
-							document.querySelector('#messageNewsletter').style.display = 'inline !important';
-							$('#messageNewsletter').show();
-							setTimeout(function () {
-								$('#inputText').show();
-								$('#messageNewsletter').hide();
-								document.querySelector('#newsletterInput').reset();
-							}, 2000);
-						}
-					});
-					e.preventDefault();
 				});
 			</script>
 
