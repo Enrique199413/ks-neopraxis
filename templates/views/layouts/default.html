@@ -158,30 +158,32 @@
 						</div>
 						<div class="modal-body neopraxis-flex-column">
 							<p class="modal-subtitle no-margin-text warm-grey-text letter-spacing-dot-one neopraxis-font-myriadpro-regular">Llena tus datos y te contactaremos lo antes posible para tu prueba gratuita</p>
-							<form action="" method="get" accept-charset="utf-8">
+							<form id="formFree" accept-charset="utf-8">
 								<div class="contact-body-modal-container neopraxis-flex-column">
+									<input type="text" name="free" hidden>
 									<div class="contact-input-box landing">
-										<input type="text" name="" value="" placeholder="Nombre" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'">
+										<input type="text" name="name" value="" placeholder="Nombre" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'">
 									</div>
 									<div class="contact-input-box landing">
-										<input type="text" name="" value="" placeholder="Correo electrónico" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico'">
+										<input type="text" name="email" value="" placeholder="Correo electrónico" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico'">
 									</div>
 									<div class="contact-input-box landing">
-										<input type="text" name="" value="" placeholder="Teléfono/Celular" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Teléfono/Celular'">
+										<input type="text" name="phone" value="" placeholder="Teléfono/Celular" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Teléfono/Celular'">
 									</div>
 									<div class="contact-input-box-textarea">
-										<textarea name="" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
+										<textarea name="message" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
 									</div>
 									<div class="contact-checkbox-box neopraxis-flex-row">
-										<input type="checkbox" name="email" value="" class="contact-checkbox inline-block cursor-pointer">
+										<input type="checkbox" name="contactByMail" value="" class="contact-checkbox inline-block cursor-pointer">
 										<p class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por correo</p>
 									</div>
 									<div class="contact-checkbox-box neopraxis-flex-row">
-										<input type="checkbox" name="phone" value="" class="contact-checkbox inline-block cursor-pointer">
+										<input type="checkbox" name="contactByPhone" value="" class="contact-checkbox inline-block cursor-pointer">
 										<p class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por teléfono</p>
 									</div>
+									<p id="textForm" class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text" style="text-align: center;">Nos pondremos en contacto contigo, gracias.</p>
 									<div class="contact-last-button-container neopraxis-flex-column">
-										<button type="" class="white-text neopraxis-font-montserrat-regular contact-btn cursor-pointer hover-green letter-spacing-dot-six">ENVIAR</button>
+										<button type="submit" class="white-text neopraxis-font-montserrat-regular contact-btn cursor-pointer hover-green letter-spacing-dot-six">ENVIAR</button>
 									</div>
 								</div>
 							</form>
@@ -221,7 +223,7 @@
 						</div>
 						<div class="newsletter-box">
 							<form id="newsletterInput">
-								<input type="text" name="email" value="" placeholder="newsletter" class="newsletter-input neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'newsletter'" id="inputText">
+								<input type="text" name="email" value="" placeholder="newsletter" class="newsletter-input-index neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'newsletter'" id="inputText">
 								<div id="messageNewsletter" class="neopraxis-font-montserrat-regular"></div>
 							</form>
 							<div class="footer-share-box inline-block">
