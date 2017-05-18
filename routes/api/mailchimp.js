@@ -28,7 +28,7 @@ exports.newsletter = function(req, res) {
 				} else if ((response.status === 400 && response.body.title === "Member Exists")) {
 					res.status(403).send({ error: 200 });
 				} else {
-					res.status(200).send({ suscribe: true });
+					res.status(200).send({ suscribed: true });
 				}
 			});
 	}
