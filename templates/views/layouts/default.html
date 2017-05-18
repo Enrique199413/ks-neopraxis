@@ -208,7 +208,10 @@
 							</a>
 						</div>
 						<div class="newsletter-box">
-							<input type="text" name="" value="" placeholder="newsletter" class="newsletter-input neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'newsletter'">
+							<form id="newsletterInput">
+								<input type="text" name="email" value="" placeholder="newsletter" class="newsletter-input neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'newsletter'" id="inputText">
+								<div id="messageNewsletter" class="neopraxis-font-montserrat-regular"></div>
+							</form>
 							<div class="footer-share-box inline-block">
 								<img src="/images/icons/facebook-white.png" alt="" class="footer-share-icon">
 								<img src="/images/icons/twitter-white.png" alt="" class="footer-share-icon">
@@ -270,6 +273,35 @@
 				$('#violet-slider').slick({
 					nextArrow: '<img class="offices-next cursor-pointer" src="/images/icons/right-arrow-white.png"></img>',
 					prevArrow: '<img class="offices-prev cursor-pointer" src="/images/icons/left-arrow-white.png"></img>',
+				});
+				// AJAX PETITION
+				$('#messageNewsletter').hide();
+				$('#newsletterInput').on('submit',function (e) {
+					$('#inputText').hide();
+					$.ajax({
+						type: 'post',
+						url: '/api/mailchimp/newsletter',
+						data: $('#newsletterInput').serialize(),
+						success: function () {
+							document.querySelector('#messageNewsletter').innerHTML = 'Gracias por tu suscripción';
+							setTimeout(function () {
+								document.querySelector('#newsletterInput').reset();	
+							  	$('#inputText').show();
+								$('#messageNewsletter').hide();
+							}, 2000);
+						},
+						error: function (error) {
+							document.querySelector('#messageNewsletter').innerHTML = error.status === 403 ? 'Ya estas registrado' : 'Verifica el correo';
+							document.querySelector('#messageNewsletter').style.display = 'inline !important';
+							$('#messageNewsletter').show();
+							setTimeout(function () {
+								$('#inputText').show();
+								$('#messageNewsletter').hide();
+								document.querySelector('#newsletterInput').reset();
+							}, 2000);
+						}
+					});
+					e.preventDefault();
 				});
 			</script>
 
