@@ -36,7 +36,6 @@ Enquiry.schema.post('save', function () {
 });
 
 Enquiry.schema.methods.sendNotificationEmail = function (callback) {
-	console.log(this);
 	if (typeof callback !== 'function') {
 		callback = function (err) {
 			if (err) {
