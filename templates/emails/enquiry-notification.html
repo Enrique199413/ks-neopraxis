@@ -1,9 +1,15 @@
-<h1>Hi %recipient.firstName%</h1>
-<p class="text-larger">An enquiry was just submitted to {{ brand }}:</p>
+<h1>Hola Neopraxis</h1>
+<p class="text-larger">Un nuevo contacto en {{ brand }}.mx:</p>
+{% if enquiry.free %}
+<p class="text-larger">Este mensaje fue mandado para probar un consultorio</p>
+{% endif %}
+{% if enquiry.nofree %}
+<p class="text-larger">Este mensaje fue mandado desde página web</p>
+{% endif %}
 {% if enquiry.email %}
-	<p class="text-larger">From
-	{% if enquiry.name.full %}
-		<strong>{{ enquiry.name.full }}</strong>
+	<p class="text-larger">De
+	{% if enquiry.fullName %}
+		<strong>{{ enquiry.fullName }}</strong>
 	{% endif %}
 
 	{% if enquiry.email %}
@@ -12,15 +18,19 @@
 	</p>
 
 	{% if enquiry.phone %}
-		<p class="text-larger">Phone: {{ enquiry.phone }}</p>
+		<p class="text-larger">Télefono: {{ enquiry.phone }}</p>
 	{% endif %}
 
-	{% if enquiry.enquiryType %}
-		<p class="text-larger">{{ enquiry._.enquiryType.format() }}</p>
-	{% endif %}
 
 	{% if enquiry.message %}
-		{{ enquiry.message.html | safe }}
+		{{ enquiry.message.md}}
+	{% endif %}
+
+	{% if enquiry.contactByEmail %}
+		{{ enquiry.contactByEmail}}
+	{% endif %}
+	{% if enquiry.contactByPhone %}
+		{{ enquiry.contactByPhone }}
 	{% endif %}
 
 	<p class="text-muted">Sent {{ enquiry._.createdAt.format() }}</p>

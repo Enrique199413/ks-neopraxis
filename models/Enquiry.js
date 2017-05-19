@@ -60,10 +60,10 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 		}).send({
 			to: admins,
 			from: {
-				name: 'neopraxis',
-				email: 'contact@neopraxis.com',
+				name: 'Neopraxis',
+				email: 'dev@blick.mx',
 			},
-			subject: 'New Enquiry for neopraxis',
+			subject: 'Nuevo mensaje de página Web Neopraxix',
 			enquiry: enquiry,
 			brand: brand,
 		}, callback);

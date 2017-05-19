@@ -7,6 +7,7 @@ exports = module.exports = function (req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
+	locals.title = 'Sobre Nosotros';
 	locals.section = 'aboutUs';
 	view.render('aboutUs');
 };

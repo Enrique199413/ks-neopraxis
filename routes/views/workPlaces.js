@@ -8,5 +8,6 @@ exports = module.exports = function (req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.section = 'workPlaces';
+	locals.title = 'Espacios de Trabajo';
 	view.render('workPlaces');
 };

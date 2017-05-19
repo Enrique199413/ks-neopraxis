@@ -7,79 +7,24 @@
 {% endblock %}
 
 {% block content %}
-	<div class="container">
-		{% if enquirySubmitted %}
-			<h3>Thanks for getting in touch.</h3>
-		{% else %}
-			<div class="row">
-				<div class="col-sm-8 col-md-6">
-					<form method="post">
-						<input type="hidden" name="action" value="contact">
-						{% set class = ( "has-error" if validationErrors.name else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>Name</span>
-								<input type="text" name="name.full" value="{{ formData["name.full"] }}" class="form-control">
-							</label>
-						</div>
-						{% set class = ( "has-error" if validationErrors.email else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>Email</span>
-								<input type="email" name="email" value="{{ formData.email }}" class="form-control">
-							</label>
-						</div>
-						<div class="form-group">
-							<label>
-								<span>Phone</span>
-								<input type="text" name="phone" value="{{ formData.phone }}" placeholder="(optional)" class="form-control">
-							</label>
-						</div>
-						{% set class = ( "has-error" if validationErrors.enquiryType else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>What are you contacting us about?</span>
-								<select name="enquiryType" class="form-control">
-									<option value="">(select one)</option>
-									{% for type in enquiryTypes %}
-										{% set selected = ( 'selected="selected"' if formData.enquiryType == type.value else "" ) %}
-										<option value="{{type.value}}" {{ selected }}>{{ type.label }}</option>
-									{% endfor %}
-								</select>
-						</div>
-						{% set class = ( "has-error" if validationErrors.message else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>Message</span>
-								<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{ formData.message }}</textarea>
-							</label>
-						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn btn-primary">Send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		{% endif %}
-	</div>
 <div class="contact-header neopraxis-flex-column">
 	<div class="contact-header-title-box">
 		<h1 class="contact-header-title no-margin-text neopraxis-font-montserrat-bold letter-spacing-dot-two charcoal-text">Contacto</h1>
 	</div>
 </div>
-<form action="" method="get" accept-charset="utf-8">
+<form accept-charset="utf-8" id="formFreeTwo">
 	<div class="contact-body-container neopraxis-flex-column">
 		<div class="contact-input-box">
-			<input type="text" name="" value="" placeholder="Nombre" class="contact-input neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'">
+			<input type="text" name="name" value="" placeholder="Nombre" class="contact-input neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'">
 		</div>
 		<div class="contact-input-box">
-			<input type="text" name="" value="" placeholder="Correo electrónico" class="contact-input neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico'">
+			<input type="text" name="email" value="" placeholder="Correo electrónico" class="contact-input neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico'">
 		</div>
 		<div class="contact-input-box">
-			<input type="text" name="" value="" placeholder="Teléfono/Celular" class="contact-input neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Teléfono/Celular'">
+			<input type="text" name="phone" value="" placeholder="Teléfono/Celular" class="contact-input neopraxis-font-myriadpro-light warm-grey" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Teléfono/Celular'">
 		</div>
 		<div class="contact-input-box-textarea">
-			<textarea name="" class="contact-input neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
+			<textarea name="message" class="contact-input neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
 		</div>
 		<div class="contact-checkbox-box neopraxis-flex-row">
 			<input type="checkbox" name="email" value="" class="contact-checkbox inline-block cursor-pointer">
@@ -89,6 +34,7 @@
 			<input type="checkbox" name="phone" value="" class="contact-checkbox inline-block cursor-pointer">
 			<p class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por teléfono</p>
 		</div>
+		<p id="textFormTwo" class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text" style="text-align: center;">Nos pondremos en contacto contigo, gracias.</p>
 		<div class="contact-last-button-container neopraxis-flex-column">
 			<button type="" class="white-text neopraxis-font-montserrat-regular contact-btn cursor-pointer hover-green letter-spacing-dot-six">ENVIAR</button>
 		</div>
