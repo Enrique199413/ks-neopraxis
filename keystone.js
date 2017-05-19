@@ -12,8 +12,8 @@ var nunjucks = require('nunjucks');
 // and documentation.
 
 keystone.init({
-	'name': 'neopraxis',
-	'brand': 'neopraxis',
+	'name': 'Neopraxis',
+	'brand': 'Neopraxis',
 
 	'stylus': 'public',
 	'static': 'public',
@@ -52,6 +52,7 @@ keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 });
 
+keystone.set('signin logo', '/images/icons/neopraxis-logo-png@3x.png');
 // Start Keystone to connect to your database and initialise the web server
 
 
