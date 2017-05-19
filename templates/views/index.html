@@ -296,7 +296,7 @@
 				{% if data.post.length %}
 					{% for post in data.post%}
 						<p class="no-margin-text charcoal-text neopraxis-font-montserrat-bold blog-subtitle letter-spacing-dot-two">{{ post.title }}</p>
-						<p class="neopraxis-font-myriadpro-regular no-margin-text charcoal-text blog-text"> {{ post.content.extended | safe}} <a class="keep-reading-link" href="/blog/post/{{ post.slug }}">Seguir leyendo</a> </p>
+						<p class="neopraxis-font-myriadpro-regular no-margin-text charcoal-text blog-text"> {{ post.content.brief | safe}} <a class="keep-reading-link" href="/blog/post/{{ post.slug }}">Seguir leyendo</a> </p>
 						<img src="{{post.image.secure_url | safe}}" alt="" class="blog-image">
 						<div class="more-blog-button-container neopraxis-flex-column">
 							<a href="/blog" class="button-link click-scrolling">
