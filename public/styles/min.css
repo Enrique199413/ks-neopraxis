@@ -1299,7 +1299,7 @@ body {
 }
 
 .service-box:hover>.service-icon-two {
-    background: url(/images/icons/group-3-copy@3x.png);
+    background: url(/images/icons/Calendar-white.png);
     background-size: 100%
 }
 
@@ -1957,6 +1957,10 @@ transition transform .8s ease-in-out {
 .modal-open {
     display: block!important
 }
+body.modal-open {
+    display: block!important;
+    overflow-y: hidden;
+}
 
 .close-modal-img {
     width: 23px;
@@ -2510,7 +2514,7 @@ textarea.contact-input {
 
 .contact-way-text {
     font-size: 11.5px;
-    line-height: 26px;
+    line-height: 15px;
     padding-left: 12px
 }
 
@@ -2914,9 +2918,11 @@ textarea.contact-input {
 
 .modal-title {
     font-size: 29px;
+}
+.modal-title-gallery {
+    font-size: 29px;
     padding-bottom: 34px
 }
-
 .green-office-text {
     color: #6ece1a;
     padding-left: 10px
@@ -3779,6 +3785,15 @@ textarea.contact-input {
     top: 50%;
     z-index: 1
 }
+.worksplace-next-member-ships,
+.worksplace-prev-member-ships {
+    display: block;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    z-index: 1
+}
 
 .worksplace-parallax-gallery-item.first {
     background: url(/images/bitmap@3x5.png) center top no-repeat;
@@ -3811,7 +3826,13 @@ textarea.contact-input {
 .worksplace-next {
     right: 37px
 }
+.worksplace-prev-member-ships {
+    left: 5px
+}
 
+.worksplace-next-member-ships {
+    right: 5px
+}
 .worksplace-last-section {
     width: 100%
 }
@@ -3858,6 +3879,36 @@ textarea.contact-input {
 #secondSection {
     position: absolute;
     top: -84px
+}
+.dots-box-blog{
+  position: absolute;
+  left: 49px;
+  top: 42px;
+  }
+.dots-images-blog-section{
+  width: 95px;
+  height: auto;
+}
+@media only screen and (min-width:1280px){
+  .header-try-button {
+    width: 187px;
+    height: 43px;
+    border-radius: 20px;
+    background-color: #658c78;
+    text-align: center;
+    padding-top: 15px;
+    float: right;
+    margin-top: 73px;
+    margin-right: -390px;
+    margin-left: 72px;
+  }
+  .header-subtitle {
+    font-size: 35px;
+    float: right;
+    width: 801px;
+    margin-top: 12px;
+    padding-left: 200px;
+  }
 }
 
 @media only screen and (min-width:767px) and (max-width:768px) {
