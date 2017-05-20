@@ -112,8 +112,8 @@ $(document).ready(function() {
 			colorModal = 'orange';
 			colorTitle = '<div class="office-title-box"><p class="modal-title inline-block no-margin-text white-text neopraxis-font-montserrat-bold">Consultorio </p><p class="modal-title orange-office-text inline-block no-margin-text neopraxis-font-montserrat-bold">naranja</p></div>'
 		}
-		$('.modal-title').empty();
-		$('.modal-title').append(colorTitle);
+		$('.modal-title-gallery').empty();
+		$('.modal-title-gallery').append(colorTitle);
 		$('.office-slider-item-modal').removeClass('green,');
 		$('.office-slider-item-modal').removeClass('red');
 		$('.office-slider-item-modal').removeClass('yellow');
