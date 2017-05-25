@@ -1195,9 +1195,17 @@ body {
 }
 
 .charcoal-text {
-    color: #343432
+    color: #444442
 }
-
+.services-more-icon-link{
+  text-decoration: none;
+}
+.services-more-icon{
+  font-size: 22px !important;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
 .white-text {
     color: #fff
 }
@@ -1247,7 +1255,7 @@ body {
 
 .about-container {
     margin-top: 50px;
-    width: 765px;
+    width: 675px;
     text-align: center
 }
 
@@ -1336,7 +1344,15 @@ body {
 .see-more-button-container {
     margin-top: 64px
 }
-
+.see-more-absolute-button-container {
+    position: absolute;
+    left: 50%;
+    margin-left: -63px;
+    bottom: -50px;
+}
+.dark-sage-hover:hover{
+  color: #697c69 !important;
+}
 .white-section-bg {
     width: 100%;
     padding-left: 0;
@@ -1834,8 +1850,8 @@ transition transform .8s ease-in-out {
 }
 
 .register-button-text {
-    font-size: 11px;
-    padding-top: 9px
+    font-size: 14px;
+    padding-top: 7px
 }
 
 .login-container {
@@ -2002,7 +2018,8 @@ body.modal-open {
 
 .modal-title-logo {
     width: 139px;
-    margin-bottom: -5px
+    margin-bottom: -5px;
+    margin-right: 5px;
 }
 
 .modal-body {
@@ -2465,7 +2482,7 @@ body.modal-open {
 }
 
 .contact-body-container {
-    padding-top: 22px
+    padding-top: 32px
 }
 
 .contact-input-box {
@@ -2544,7 +2561,7 @@ textarea.contact-input {
 }
 
 .contact-last-button-container {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 40px
 }
 
@@ -2567,7 +2584,7 @@ textarea.contact-input {
 
 .fixed-map-info-box {
     width: 310px;
-    height: 190px;
+    height: 205px;
     background-color: #6d989c;
     position: absolute;
     left: 49px;
@@ -3404,7 +3421,8 @@ textarea.contact-input {
     height: 80px;
     display: none;
     background-color: #c2a463;
-    z-index: 1
+    z-index: 1;
+    position: relative;
 }
 
 .services-gold-box.open {
@@ -3478,22 +3496,29 @@ textarea.contact-input {
     font-size: 11px;
     line-height: 18px;
     padding-top: 2px;
-    padding-left: 26px
+    padding-left: 26px;
+    padding-bottom: 12px;
 }
 
 .tools-clock-icon {
     width: 11px;
-    height: 11px
+    height: 11px;
 }
-
+.tools-time-last-border{
+  border-left: solid 1px #9b9b9b;
+  padding-left: 7px;
+}
 .tools-age,
-.tools-age-restriction,
 .tools-standard {
     font-size: 15px;
     border-right: solid 1px #9b9b9b;
     padding-right: 7px
 }
-
+.tools-age,
+.tools-standard,
+.tools-age-restriction {
+  height: 20px;
+}
 .tools-time {
     font-size: 15px
 }
@@ -3506,7 +3531,7 @@ textarea.contact-input {
     width: 99%;
     height: 1px;
     background-color: #e5e5e5;
-    margin-top: 11px;
+    margin-top: 22px;
     margin-right: 0;
     margin-left: auto
 }
@@ -3562,7 +3587,7 @@ textarea.contact-input {
 .worksplace-header {
     width: 100%;
     height: 670px;
-    background: url(/images/bitmap@3x3.png) center top no-repeat fixed;
+    background: url(/images/rsz_bitmap3x3.png) center top no-repeat fixed;
     background-size: cover
 }
 
@@ -3636,7 +3661,7 @@ textarea.contact-input {
 .circle-arrow-box {
     position: absolute;
     left: 50%;
-    bottom: 68px;
+    bottom: 130px;
     margin-left: -12.5px
 }
 
@@ -3875,10 +3900,13 @@ textarea.contact-input {
 .worksplace-second-section {
     position: relative
 }
+.showin-mobile{
+    display: none !important;
+}
 
 #secondSection {
     position: absolute;
-    top: -84px
+    top: 0px
 }
 .dots-box-blog{
   position: absolute;
@@ -3888,6 +3916,16 @@ textarea.contact-input {
 .dots-images-blog-section{
   width: 95px;
   height: auto;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #444342 !important;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
 }
 @media only screen and (min-width:1280px){
   .header-try-button {
@@ -4393,7 +4431,7 @@ textarea.contact-input {
         display: inline!important;
         position: fixed;
         padding: 0!important;
-        top: 2.3rem;
+        top: 2.5rem;
         right: 2rem;
         z-index: 1
     }
@@ -4431,12 +4469,15 @@ textarea.contact-input {
         display: none;
         position: fixed;
         background-color: #fff;
-        width: 190px;
+        width: 100%;
         padding-left: 0;
         top: 62px;
         left: 0;
-        height: 100vh;
+        height: 460px;
         margin-left: 0
+    }
+    .showin-mobile{
+      display: block !important;
     }
     .nav li {
         display: block;
@@ -4613,7 +4654,7 @@ textarea.contact-input {
     }
     .links-second-section {
         padding-right: 0!important;
-        text-align: right
+        text-align: left
     }
     .newsletter-box {
         padding-top: 20px
@@ -5257,6 +5298,9 @@ textarea.contact-input {
   }
   .nav li.active {
     border-top: solid 4px #FFFFFF;
+    border-left: solid 4px #6b806c;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
   .title-border-gold {
     width: 40px;
@@ -5280,5 +5324,9 @@ textarea.contact-input {
     right: 13px;
     top: 25px;
     font-size: 12px;
+  }
+  .contac-map-container, .contact-map {
+    width: 100%;
+    height: auto;
   }
 }
