@@ -193,5 +193,17 @@ $(document).ready(function() {
 			trialModal.style.display = "none";
 		}
 	}
+	$("#newsletterInput").validate({
+		rules: {
+			name: { required: true, minlength: 2},
+			phone: {required: true, minlength: 8, number: true},
+			email: { required:true, email: true},
+		},
+		messages: {
+			name: 'Debe introducir su nombre',
+			phone: 'Debe introducir su número',
+			email: 'Debe introducir su email',
+		},
+	}).form();
 	var filler = 'just testing';
 });
