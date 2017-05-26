@@ -1307,6 +1307,7 @@ body {
 }
 
 .service-box:hover>.service-icon-two {
+    height: 41px;
     background: url(/images/icons/Calendar-white.png);
     background-size: 100%
 }
