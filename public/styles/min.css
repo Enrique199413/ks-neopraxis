@@ -3949,7 +3949,27 @@ textarea.contact-input {
     padding-left: 200px;
   }
 }
-
+@media only screen and (min-width:1680px){
+  .header-try-button {
+    width: 187px;
+    height: 43px;
+    border-radius: 20px;
+    background-color: #658c78;
+    text-align: center;
+    padding-top: 15px;
+    float: right;
+    margin-top: 73px;
+    margin-right: -490px;
+    margin-left: 72px;
+  }
+  .header-subtitle {
+    font-size: 35px;
+    float: right;
+    width: 901px;
+    margin-top: 12px;
+    padding-left: 300px;
+  }
+}
 @media only screen and (min-width:767px) and (max-width:768px) {
     .hamburger {
         padding: 0!important
