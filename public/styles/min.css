@@ -1685,11 +1685,11 @@ transition transform .8s ease-in-out {
 .contact-box {
     position: absolute;
     width: 311px;
-    height: 415px;
     background-color: #91b1b3;
     top: 52px;
     left: 100px;
-    z-index: 999
+    z-index: 999;
+    padding-bottom: 20px;
 }
 
 .contact-address {
@@ -2488,7 +2488,6 @@ body.modal-open {
 
 .contact-input-box {
     width: 330px;
-    height: 35px;
     margin-bottom: 12px
 }
 
@@ -2497,7 +2496,13 @@ body.modal-open {
     height: 100px;
     margin-bottom: 14px
 }
-
+label.error {
+    display: block;
+    padding-top: .3em;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    padding-bottom: 10px;
+}
 .contact-input {
     width: 330px;
     border: 1px solid #e5e5e5;
@@ -3087,8 +3092,9 @@ textarea.contact-input {
 .offices-next,
 .offices-prev {
     display: block;
-    height: 16px;
-    width: 8px
+    height: 26px;
+    width: 18px;
+    padding: 5px;
 }
 
 .offices-prev {
