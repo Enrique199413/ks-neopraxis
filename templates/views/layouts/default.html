@@ -49,6 +49,7 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<link rel='stylesheet' href='https://cdn.rawgit.com/jonsuh/hamburgers/e8cd462c/dist/hamburgers.css'>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 		<script src="/js/index.js"></script>
 		<script src="/js/blick.utils.js"></script>
 		{# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
@@ -99,6 +100,13 @@
 						{% endif %}
 						<a href="/memberships" class="">Membresías</a>
 					</li>
+					{% if section == 'offices' %}
+					<li class="neopraxis-font-montserrat-regular active">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular">
+						{% endif %}
+						<a href="/offices" class="">Consultorios</a>
+					</li>
 					{% if section == 'tools' %}
 					<li class="neopraxis-font-montserrat-regular active">
 						{% else %}
@@ -112,6 +120,13 @@
 					<li class="neopraxis-font-montserrat-regular">
 						{% endif %}
 						<a href="/blog" class="">Blog</a>
+					</li>
+					{% if section == 'register' %}
+					<li class="neopraxis-font-montserrat-regular active showin-mobile">
+						{% else %}
+					<li class="neopraxis-font-montserrat-regular showin-mobile">
+						{% endif %}
+						<a href="/register" class="">Registro</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right" id="neopraxis-main-navbar-right">
@@ -183,11 +198,11 @@
 									<div class="contact-input-box-textarea">
 										<textarea name="message" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
 									</div>
-									<div class="contact-checkbox-box neopraxis-flex-row">
+									<div class="contact-checkbox-box contact-checkbox-box-modal neopraxis-flex-row">
 										<input type="checkbox" name="contactByMail" value="" class="contact-checkbox inline-block cursor-pointer">
 										<p class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por correo</p>
 									</div>
-									<div class="contact-checkbox-box neopraxis-flex-row">
+									<div class="contact-checkbox-box contact-checkbox-box-modal neopraxis-flex-row">
 										<input type="checkbox" name="contactByPhone" value="" class="contact-checkbox inline-block cursor-pointer">
 										<p class="neopraxis-free-font neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text">Quiero que me contacten por teléfono</p>
 									</div>
@@ -233,7 +248,7 @@
 						</div>
 						<div class="newsletter-box">
 							<form id="newsletterInput">
-								<input type="text" name="email" value="" placeholder="newsletter" class="newsletter-input-index neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'newsletter'" id="inputText">
+								<input type="text" name="email" value="" placeholder="BLog" class="newsletter-input-index neopraxis-font-myriadpro-light uppercase letter-spacing-dot-six"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Blog'" id="inputText">
 								<div id="messageNewsletter" class="neopraxis-font-montserrat-regular"></div>
 							</form>
 							<div class="footer-share-box inline-block">

@@ -25,6 +25,11 @@
 					<p class="no-margin-text neopraxis-font-montserrat-regular header-link-text white-text">Membresías</p>
 				</div>
 			</a>
+			<a href="/offices" class="header-link click-scrolling">
+				<div class="header-link-box active">
+					<p class="no-margin-text neopraxis-font-montserrat-regular header-link-text white-text">Consultorios</p>
+				</div>
+			</a>
 			<a href="/tools" class="header-link click-scrolling">
 				<div class="header-link-box active">
 					<p class="no-margin-text neopraxis-font-montserrat-regular header-link-text white-text">Herramientas</p>
@@ -79,8 +84,8 @@
 		<div class="about-container neopraxis-flex-column">
 			<p class="about-text neopraxis-font-gandhisans-bold-italic no-margin-text line-height-twenty-two greyish-brown-text">Ya es hora de que las cosas cambien.</p>
 			<p class="about-text neopraxis-font-gandhisans-regular no-margin-text line-height-twenty-two greyish-brown-text">Sabemos que para crecer profesionalmente se necesita más que un espacio físico.</p>
-			<p class="about-text neopraxis-font-gandhisans-regular no-margin-text line-height-twenty-two greyish-brown-text">Ten acceso <b><i>a tu propio consultorio</i></b> y a herramientas y servicios que favorezcan el crecimiento de tu práctica. </p>
-			<p class="about-text neopraxis-font-gandhisans-regular no-margin-text line-height-twenty-two greyish-brown-text">No estas solo, aquí harás contacto con una red de colegas e instituciones con un fin en común: <b>establecer una nueva cultura de trabajo para el Psicólogo, que beneficie a toda la sociedad.</b></p>
+			<p class="about-text neopraxis-font-gandhisans-regular no-margin-text line-height-twenty-two greyish-brown-text">Ten acceso <b class="neopraxis-font-gandhisans-bold"><i>a tu propio consultorio</i></b> y a herramientas y servicios que favorezcan el crecimiento de tu práctica. </p>
+			<p class="about-text neopraxis-font-gandhisans-regular no-margin-text line-height-twenty-two greyish-brown-text">No estas solo, aquí harás contacto con una red de colegas e instituciones con un fin en común: <b class="neopraxis-font-gandhisans-bold">establecer una nueva cultura de trabajo para el Psicólogo, que beneficie a toda la sociedad.</b></p>
 		</div>
 		<div class="services-container neopraxis-flex-row">
 			<a href="/workPlaces" title="">
@@ -123,11 +128,20 @@
 				</div>
 			</div>
 			<div class="girl-parallax-green-section inline-block">
-				<div class="bottom-text-container">
-					<p class="dark-sage-text no-margin-text neopraxis-font-montserrat-bold green-text-white-box">¿Y si mi profesión es otra?</p>
-				</div>
+				<a href="/faq" class="button-link">
+					<div class="bottom-text-container">
+						<p class="dark-sage-text no-margin-text neopraxis-font-montserrat-bold green-text-white-box dark-sage-hover cursor-pointer">¿Y si mi profesión es otra?</p>
+					</div>
+				</a>
 				<div class="white-rectangle">
 
+				</div>
+				<div class="see-more-absolute-button-container neopraxis-flex-column">
+					<a href="/faq" class="button-link click-scrolling">
+						<div class="see-more-button-box hover-green">
+							<p class="neopraxis-font-montserrat-regular white-text see-more-btn-text no-margin-text letter-spacing-dot-six">VER MÁS</p>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="green-image-absolute">
@@ -296,11 +310,11 @@
 				{% if data.post.length %}
 					{% for post in data.post%}
 						<p class="no-margin-text charcoal-text neopraxis-font-montserrat-bold blog-subtitle letter-spacing-dot-two">{{ post.title }}</p>
-						<p class="neopraxis-font-myriadpro-regular no-margin-text charcoal-text blog-text"> {{ post.content.brief | safe}} <a class="keep-reading-link" href="/blog/post/{{ post.slug }}">Seguir leyendo</a> </p>
+						<p class="neopraxis-font-myriadpro-regular no-margin-text charcoal-text blog-text"> {{ post.content.brief | safe}} <a class="keep-reading-link cursor-pointer" href="/blog/post/{{ post.slug }}">Seguir leyendo</a> </p>
 						<img src="{{post.image.secure_url | safe}}" alt="" class="blog-image">
 						<div class="more-blog-button-container neopraxis-flex-column">
 							<a href="/blog" class="button-link click-scrolling">
-								<div class="see-more-button-box hover-green">
+								<div class="see-more-button-box hover-green cursor-pointer">
 									<p class="neopraxis-font-montserrat-regular white-text see-more-btn-text no-margin-text letter-spacing-dot-six">CONOCE MÁS</p>
 								</div>
 							</a>
