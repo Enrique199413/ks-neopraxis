@@ -168,9 +168,11 @@ $(document).ready(function() {
 	});
 	
 	var trialModal = document.getElementById('freeTrialModal');
+	var registerModal = document.getElementById('registerModal');
 
 // Get the button that opens the modal
 	var footerBtn = document.getElementById("footerBtn");
+	var registerBtn = document.getElementById("registerBtn");
 
 // Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("modal-close-btn-container")[0];
@@ -178,6 +180,11 @@ $(document).ready(function() {
 // When the user clicks on the button, open the modal 
 	footerBtn.onclick = function() {
 		trialModal.classList.add('modal-open');
+		body.classList.add('modal-open');
+	}
+	registerBtn.onclick = function(e) {
+		e.preventDefault();
+		registerModal.classList.add('modal-open');
 		body.classList.add('modal-open');
 	}
 // When the user clicks anywhere outside of the modal, close it
