@@ -3955,6 +3955,12 @@ textarea.contact-input {
     padding-left: 200px;
   }
 }
+.register-logo{
+    margin-bottom: -2px;
+}
+.register-modal-header{
+    padding-bottom: 48px;
+}
 @media only screen and (min-width:1680px){
   .header-try-button {
     width: 187px;
@@ -5355,5 +5361,9 @@ textarea.contact-input {
   .contac-map-container, .contact-map {
     width: 100%;
     height: auto;
+  }
+  .modal-title-box {
+    width: 90%;
+    text-align: center;
   }
 }
