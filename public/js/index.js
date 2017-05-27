@@ -168,9 +168,11 @@ $(document).ready(function() {
 	});
 	
 	var trialModal = document.getElementById('freeTrialModal');
+	var registerModal = document.getElementById('registerModal');
 
 // Get the button that opens the modal
 	var footerBtn = document.getElementById("footerBtn");
+	var registerBtn = document.getElementById("registerBtn");
 
 // Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("modal-close-btn-container")[0];
@@ -178,6 +180,11 @@ $(document).ready(function() {
 // When the user clicks on the button, open the modal 
 	footerBtn.onclick = function() {
 		trialModal.classList.add('modal-open');
+		body.classList.add('modal-open');
+	}
+	registerBtn.onclick = function(e) {
+		e.preventDefault();
+		registerModal.classList.add('modal-open');
 		body.classList.add('modal-open');
 	}
 // When the user clicks anywhere outside of the modal, close it
@@ -193,7 +200,7 @@ $(document).ready(function() {
 			trialModal.style.display = "none";
 		}
 	}
-	$("#newsletterInput").validate({
+	$("#formFree").validate({
 		rules: {
 			name: { required: true, minlength: 2},
 			phone: {required: true, minlength: 8, number: true},
@@ -205,5 +212,31 @@ $(document).ready(function() {
 			email: 'Debe introducir su email',
 		},
 	}).form();
+
+	$("#formFreeTwo").validate({
+		rules: {
+			name: { required: true, minlength: 2},
+			phone: {required: true, minlength: 8, number: true},
+			email: { required:true, email: true},
+		},
+		messages: {
+			name: 'Debe introducir su nombre',
+			phone: 'Debe introducir su número',
+			email: 'Debe introducir su email',
+		},
+	});
+
+	$("#formDataIndex").validate({
+		rules: {
+			name: { required: true, minlength: 2},
+			phone: {required: true, minlength: 8, number: true},
+			email: { required:true, email: true},
+		},
+		messages: {
+			name: 'Debe introducir su nombre',
+			phone: 'Debe introducir su número',
+			email: 'Debe introducir su email',
+		},
+	});
 	var filler = 'just testing';
 });

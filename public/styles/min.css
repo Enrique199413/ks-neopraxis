@@ -1307,6 +1307,7 @@ body {
 }
 
 .service-box:hover>.service-icon-two {
+    height: 41px;
     background: url(/images/icons/Calendar-white.png);
     background-size: 100%
 }
@@ -1684,11 +1685,11 @@ transition transform .8s ease-in-out {
 .contact-box {
     position: absolute;
     width: 311px;
-    height: 415px;
     background-color: #91b1b3;
     top: 52px;
     left: 100px;
-    z-index: 999
+    z-index: 999;
+    padding-bottom: 20px;
 }
 
 .contact-address {
@@ -2487,7 +2488,6 @@ body.modal-open {
 
 .contact-input-box {
     width: 330px;
-    height: 35px;
     margin-bottom: 12px
 }
 
@@ -2496,7 +2496,13 @@ body.modal-open {
     height: 100px;
     margin-bottom: 14px
 }
-
+label.error {
+    display: block;
+    padding-top: .3em;
+    font-family: 'HelveticaNeue';
+    font-size: 12px;
+    padding-bottom: 10px;
+}
 .contact-input {
     width: 330px;
     border: 1px solid #e5e5e5;
@@ -3086,8 +3092,9 @@ textarea.contact-input {
 .offices-next,
 .offices-prev {
     display: block;
-    height: 16px;
-    width: 8px
+    height: 26px;
+    width: 18px;
+    padding: 5px;
 }
 
 .offices-prev {
@@ -3948,7 +3955,33 @@ textarea.contact-input {
     padding-left: 200px;
   }
 }
-
+.register-logo{
+    margin-bottom: -2px;
+}
+.register-modal-header{
+    padding-bottom: 48px;
+}
+@media only screen and (min-width:1680px){
+  .header-try-button {
+    width: 187px;
+    height: 43px;
+    border-radius: 20px;
+    background-color: #658c78;
+    text-align: center;
+    padding-top: 15px;
+    float: right;
+    margin-top: 73px;
+    margin-right: -490px;
+    margin-left: 72px;
+  }
+  .header-subtitle {
+    font-size: 35px;
+    float: right;
+    width: 901px;
+    margin-top: 12px;
+    padding-left: 300px;
+  }
+}
 @media only screen and (min-width:767px) and (max-width:768px) {
     .hamburger {
         padding: 0!important
@@ -5328,5 +5361,9 @@ textarea.contact-input {
   .contac-map-container, .contact-map {
     width: 100%;
     height: auto;
+  }
+  .modal-title-box {
+    width: 90%;
+    text-align: center;
   }
 }
