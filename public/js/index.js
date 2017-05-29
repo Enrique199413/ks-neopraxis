@@ -176,16 +176,26 @@ $(document).ready(function() {
 
 // Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("modal-close-btn-container")[0];
+	var trialClose = document.getElementById('trialClose');
+	var registerClose = document.getElementById('registerClose');
 	var body = document.getElementById('body');
 // When the user clicks on the button, open the modal 
 	footerBtn.onclick = function() {
 		trialModal.classList.add('modal-open');
 		body.classList.add('modal-open');
 	}
+	trialClose.onclick = function() {
+		trialModal.classList.remove('modal-open');
+		body.classList.remove('modal-open');
+	}
 	registerBtn.onclick = function(e) {
 		e.preventDefault();
 		registerModal.classList.add('modal-open');
 		body.classList.add('modal-open');
+	}
+	registerClose.onclick = function() {
+		registerBtn.classList.remove('modal-open');
+		body.classList.remove('modal-open');
 	}
 // When the user clicks anywhere outside of the modal, close it
 // When the user clicks on <span> (x), close the modal
