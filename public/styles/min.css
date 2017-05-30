@@ -2503,13 +2503,12 @@ body.modal-open {
 
 .contact-input-box-textarea {
     width: 330px;
-    height: 100px;
     margin-bottom: 14px
 }
 label.error {
     display: block;
     padding-top: .3em;
-    font-family: 'HelveticaNeue';
+    font-family: 'MyriadPro-Light';
     font-size: 12px;
     padding-bottom: 10px;
 }
