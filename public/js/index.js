@@ -157,6 +157,7 @@ $(document).ready(function() {
 		$('.office-slider-item-modal').removeClass('blue');
 		$('.office-slider-item-modal').addClass(colorModal);
 		$('#myModal').show();
+		$('.modal-slider').slick('unslick');
 		$('body').addClass('modal-open');
 		$('.modal-slider').slick({
 			nextArrow: '<img class="modal-offices-next cursor-pointer" src="/images/icons/right-arrow-white.png"></img>',
@@ -199,16 +200,13 @@ $(document).ready(function() {
 	});
 	
 	var trialModal = document.getElementById('freeTrialModal');
-	var registerModal = document.getElementById('registerModal');
 
 // Get the button that opens the modal
 	var footerBtn = document.getElementById("footerBtn");
-	var registerBtn = document.getElementById("registerBtn");
 
 // Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("modal-close-btn-container")[0];
 	var trialClose = document.getElementById('trialClose');
-	var registerClose = document.getElementById('registerClose');
 	var body = document.getElementById('body');
 // When the user clicks on the button, open the modal 
 	footerBtn.onclick = function() {
@@ -219,21 +217,25 @@ $(document).ready(function() {
 		trialModal.classList.remove('modal-open');
 		body.classList.remove('modal-open');
 	}
-	registerBtn.onclick = function(e) {
-		e.preventDefault();
-		registerModal.classList.add('modal-open');
-		body.classList.add('modal-open');
-	}
-	registerClose.onclick = function() {
-		registerBtn.classList.remove('modal-open');
-		body.classList.remove('modal-open');
-	}
 // When the user clicks anywhere outside of the modal, close it
 // When the user clicks on <span> (x), close the modal
 	span.onclick = function() {
 		trialModal.classList.remove('modal-open');
 		body.classList.remove('modal-open');
 	}
+	var registerModal = document.getElementById('registerModal');
+	  var registerBtn = document.getElementById("registerBtn");
+	  var registerClose = document.getElementById('registerClose');
+	  registerBtn.onclick = function(e) {
+	    e.preventDefault();
+	    registerModal.classList.add('modal-open');
+	    body.classList.add('modal-open');
+	  }
+	  registerClose.onclick = function() {
+	    console.log('kkk')
+	    registerModal.classList.remove('modal-open');
+	    body.classList.remove('modal-open');
+	  }
 	window.onclick = function(event) {
 		if (event.target == trialModal) {
 			trialModal.classList.remove('modal-open');

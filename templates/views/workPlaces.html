@@ -37,6 +37,13 @@
 					{% endif %}
 					<a href="/memberships" class="">Membresías</a>
 				</li>
+				{% if section == 'offices' %}
+				<li class="neopraxis-font-montserrat-regular active workplaces">
+					{% else %}
+				<li class="neopraxis-font-montserrat-regular workplaces">
+					{% endif %}
+					<a href="/offices" class="">Consultorios</a>
+				</li>
 				{% if section == 'tools' %}
 				<li class="neopraxis-font-montserrat-regular active workplaces">
 					{% else %}
