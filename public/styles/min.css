@@ -2489,7 +2489,7 @@ body.modal-open {
 }
 
 .contact-header-title-box {
-    padding-top: 84px
+    padding-top: 94px
 }
 
 .contact-body-container {
@@ -3103,9 +3103,9 @@ textarea.contact-input {
 .offices-next,
 .offices-prev {
     display: block;
-    height: 26px;
-    width: 18px;
-    padding: 5px;
+    height: 46px;
+    width: 38px;
+    padding: 15px;
 }
 
 .offices-prev {
@@ -3979,6 +3979,11 @@ textarea.contact-input {
 .register-modal-header{
     padding-bottom: 48px;
 }
+div#messageNewsletter {
+    height: 36px;
+    color: white;
+    text-align: center;
+}
 @media only screen and (min-width:1680px){
   .header-try-button {
     width: 187px;
@@ -3998,6 +4003,27 @@ textarea.contact-input {
     width: 901px;
     margin-top: 12px;
     padding-left: 300px;
+  }
+}
+@media only screen and (min-width:2380px){
+  .header-try-button {
+    width: 187px;
+    height: 43px;
+    border-radius: 20px;
+    background-color: #658c78;
+    text-align: center;
+    padding-top: 15px;
+    float: right;
+    margin-top: 73px;
+    margin-right: -990px;
+    margin-left: 72px;
+  }
+  .header-subtitle {
+    font-size: 35px;
+    float: right;
+    width: 1401px;
+    margin-top: 12px;
+    padding-left: 800px;
   }
 }
 @media only screen and (min-width:767px) and (max-width:768px) {
@@ -4482,7 +4508,7 @@ textarea.contact-input {
         display: inline!important;
         position: fixed;
         padding: 0!important;
-        top: 2.5rem;
+        top: 2.2rem;
         right: 2rem;
         z-index: 1
     }
@@ -4597,7 +4623,9 @@ textarea.contact-input {
     }
     #neopraxisNavbar {
         display: -ms-flexbox!important;
-        display: flex!important
+        display: flex!important;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .header-navbar,
     .header-right-section {
@@ -5037,7 +5065,7 @@ textarea.contact-input {
         margin: auto!important
     }
     .contact-checkbox-box {
-        width: 80%;
+        width: 300px;
     }
     .contact-checkbox-box-modal {
         width: 100%;
@@ -5160,8 +5188,7 @@ textarea.contact-input {
         background: linear-gradient(45deg, #2ea36f 0, #155628 100%);
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
         opacity: 1;
-        margin-left: 50px;
-        margin-right: 50px
+        margin: auto;
     }
     .newsletter-container{
 	    display: flex;
@@ -5346,7 +5373,7 @@ textarea.contact-input {
     margin-bottom: 14px;
   }
   .nav li.active {
-    border-top: solid 4px #FFFFFF;
+    border-top: transparent;
     border-left: solid 4px #6b806c;
     padding-top: 15px;
     padding-bottom: 10px;
@@ -5423,5 +5450,12 @@ textarea.contact-input {
   .faq-box {
     max-height: 100%;
     overflow-y: scroll;
-    }
+  }
+  .fitLogo {
+    width: 175px;
+    height: auto;
+    padding-top: 26px;
+    margin-top: -8px;
+    margin-left: 30px;
+  }
 }
