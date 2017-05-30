@@ -19,43 +19,33 @@ $(document).ready(function() {
 	$("#formFree").validate({
 		rules: {
 			name: { required: true, minlength: 2},
-			phone: {required: true, minlength: 8, number: true},
 			email: { required:true, email: true},
-			message: { required: true, minlength: 2},
 		},
 		messages: {
-			name: 'Debe introducir su nombre',
-			phone: 'Debe introducir su número',
-			email: 'Debe introducir su email',
-			message: 'Debe introducir su mensaje',
+			name: 'Este campo es olbigatorio',
+			email: 'Este campo es olbigatorio',
 		},
 	});
 
 	$("#formFreeTwo").validate({
 		rules: {
 			name: { required: true, minlength: 2},
-			phone: {required: true, minlength: 8, number: true},
 			email: { required:true, email: true},
-			message: { required: true, minlength: 2},
 		},
 		messages: {
-			name: 'Debe introducir su nombre',
-			phone: 'Debe introducir su número',
-			email: 'Debe introducir su email',
-			message: 'Debe introducir su mensaje',
+			name: 'Este campo es olbigatorio',
+			email: 'Este campo es olbigatorio',
 		},
 	});
 
 	$("#formDataIndex").validate({
 		rules: {
 			name: { required: true, minlength: 2},
-			phone: {required: true, minlength: 8, number: true},
 			email: { required:true, email: true},
 		},
 		messages: {
-			name: 'Debe introducir su nombre',
-			phone: 'Debe introducir su número',
-			email: 'Debe introducir su email',
+			name: 'Este campo es olbigatorio',
+			email: 'Este campo es olbigatorio',
 		},
 	});
 	$('.faq-button-box').on('click', function(event) {
