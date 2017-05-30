@@ -59,7 +59,7 @@
 		{# Add any other template-specific HEAD tags by extending the head block #}
 		{% block head %}{% endblock %}
 	</head>
-	<body>
+	<body id="body">
 
 		{# HEADER #}
 		{% if section == 'index' or section == 'workPlaces'%}
@@ -155,7 +155,7 @@
 			</nav>
 
 		{# BODY #}
-		<div id="body">
+		<div id="">
 			{# NOTE:
 			   There is no .container wrapping class around body blocks to allow more flexibility in design.
 			   Remember to include it in your templates when you override the intro and content blocks! #}

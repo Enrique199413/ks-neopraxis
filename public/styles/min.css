@@ -4614,7 +4614,7 @@ div#messageNewsletter {
     }
     .neopraxis-navbar {
         -ms-flex-pack: center!important;
-        justify-content: center!important;
+        justify-content: flex-start!important;
         padding-top: 15px!important;
         padding-bottom: 15px!important
     }

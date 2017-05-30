@@ -157,7 +157,6 @@ $(document).ready(function() {
 		$('.office-slider-item-modal').removeClass('blue');
 		$('.office-slider-item-modal').addClass(colorModal);
 		$('#myModal').show();
-		$('.modal-slider').slick('unslick');
 		$('body').addClass('modal-open');
 		$('.modal-slider').slick({
 			nextArrow: '<img class="modal-offices-next cursor-pointer" src="/images/icons/right-arrow-white.png"></img>',
