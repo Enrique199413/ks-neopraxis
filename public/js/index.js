@@ -21,24 +21,28 @@ $(document).ready(function() {
 			name: { required: true, minlength: 2},
 			phone: {required: true, minlength: 8, number: true},
 			email: { required:true, email: true},
+			message: { required: true, minlength: 2},
 		},
 		messages: {
 			name: 'Debe introducir su nombre',
 			phone: 'Debe introducir su número',
 			email: 'Debe introducir su email',
+			message: 'Debe introducir su mensaje',
 		},
-	}).form();
+	});
 
 	$("#formFreeTwo").validate({
 		rules: {
 			name: { required: true, minlength: 2},
 			phone: {required: true, minlength: 8, number: true},
 			email: { required:true, email: true},
+			message: { required: true, minlength: 2},
 		},
 		messages: {
 			name: 'Debe introducir su nombre',
 			phone: 'Debe introducir su número',
 			email: 'Debe introducir su email',
+			message: 'Debe introducir su mensaje',
 		},
 	});
 
