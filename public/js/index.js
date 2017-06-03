@@ -88,7 +88,7 @@ $(document).ready(function() {
 			$(this).parent().find('.open-slide').hide();
 			$(this).parent().find('.open-slide').toggleClass('rotate');
 		}
-	);
+		);
 	$( ".services-gold-box" ).hover(
 		function() {
 			$(this).addClass('open');
@@ -99,7 +99,7 @@ $(document).ready(function() {
 			$(this).removeClass('open');
 			$(this).parent().find('.services-original-box').show();
 		}
-	);
+		);
 	$( ".services-original-box" ).hover(
 		function() {
 			$(this).hide();
@@ -110,7 +110,7 @@ $(document).ready(function() {
 			$(this).parent().find('.services-gold-box').hide();
 			$(this).parent().find('.services-gold-box').removeClass('open');
 		}
-	);
+		);
 	$( ".open-slide" ).hover(
 		function() {
 			$(this).show();
@@ -119,7 +119,7 @@ $(document).ready(function() {
 			$(this).hide();
 			$(this).parent().find('.closed-slide').show();
 		}
-	);
+		);
 	$('.gallery-link').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
@@ -186,67 +186,67 @@ $(document).ready(function() {
 			prevArrow: '<img class="modal-offices-prev cursor-pointer" src="/images/icons/left-arrow-white.png"></img>',
 		});
 	});
-	var galleryModal = document.getElementById('myModal');
-	var galleryModalBox = document.getElementById('myModalBox');
-	$('.modal-close-btn-container-offices').on('click', function(event) {
-		event.preventDefault();
-		/* Act on the event */
+var galleryModal = document.getElementById('myModal');
+var galleryModalBox = document.getElementById('myModalBox');
+$('.modal-close-btn-container-offices').on('click', function(event) {
+	event.preventDefault();
+	/* Act on the event */
+	$('#myModal').hide();
+	$('body').removeClass('modal-open');
+});
+$(window).on('click', function(event) {
+	/* Act on the event */
+	if (event.target == galleryModal || event.target == galleryModalBox) {
+		trialModal.classList.remove('modal-open');
+		body.classList.remove('modal-open');
 		$('#myModal').hide();
 		$('body').removeClass('modal-open');
-	});
-	$(window).on('click', function(event) {
-		/* Act on the event */
-		if (event.target == galleryModal || event.target == galleryModalBox) {
-			trialModal.classList.remove('modal-open');
-			body.classList.remove('modal-open');
-			$('#myModal').hide();
-			$('body').removeClass('modal-open');
-		}
-	});
-	
-	var trialModal = document.getElementById('freeTrialModal');
+	}
+});
+
+var trialModal = document.getElementById('freeTrialModal');
 
 // Get the button that opens the modal
-	var footerBtn = document.getElementById("footerBtn");
+var footerBtn = document.getElementById("footerBtn");
 
 // Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("modal-close-btn-container")[0];
-	var trialClose = document.getElementById('trialClose');
-	var body = document.getElementById('body');
+var span = document.getElementsByClassName("modal-close-btn-container")[0];
+var trialClose = document.getElementById('trialClose');
+var body = document.getElementById('body');
 // When the user clicks on the button, open the modal 
-	footerBtn.onclick = function() {
-		trialModal.classList.add('modal-open');
-		body.classList.add('modal-open');
-	}
-	trialClose.onclick = function() {
-		trialModal.classList.remove('modal-open');
-		body.classList.remove('modal-open');
-	}
+footerBtn.onclick = function() {
+	trialModal.classList.add('modal-open');
+	body.classList.add('modal-open');
+}
+trialClose.onclick = function() {
+	trialModal.classList.remove('modal-open');
+	body.classList.remove('modal-open');
+}
 // When the user clicks anywhere outside of the modal, close it
 // When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
+span.onclick = function() {
+	trialModal.classList.remove('modal-open');
+	body.classList.remove('modal-open');
+}
+var registerModal = document.getElementById('registerModal');
+var registerBtn = document.getElementById("registerBtn");
+var registerClose = document.getElementById('registerClose');
+registerBtn.onclick = function(e) {
+	e.preventDefault();
+	registerModal.classList.add('modal-open');
+	body.classList.add('modal-open');
+}
+registerClose.onclick = function() {
+	console.log('kkk')
+	registerModal.classList.remove('modal-open');
+	body.classList.remove('modal-open');
+}
+window.onclick = function(event) {
+	if (event.target == trialModal) {
 		trialModal.classList.remove('modal-open');
 		body.classList.remove('modal-open');
+		trialModal.style.display = "none";
 	}
-	var registerModal = document.getElementById('registerModal');
-	  var registerBtn = document.getElementById("registerBtn");
-	  var registerClose = document.getElementById('registerClose');
-	  registerBtn.onclick = function(e) {
-	    e.preventDefault();
-	    registerModal.classList.add('modal-open');
-	    body.classList.add('modal-open');
-	  }
-	  registerClose.onclick = function() {
-	    console.log('kkk')
-	    registerModal.classList.remove('modal-open');
-	    body.classList.remove('modal-open');
-	  }
-	window.onclick = function(event) {
-		if (event.target == trialModal) {
-			trialModal.classList.remove('modal-open');
-			body.classList.remove('modal-open');
-			trialModal.style.display = "none";
-		}
-	}
-	var filler = 'just testing';
+}
+var filler = 'just testing';
 });
