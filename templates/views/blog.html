@@ -1,7 +1,7 @@
 {% extends "layouts/default.html" %}
 
 {% macro blogPost(post) %}
-	<div class="post-list-box post" data-ks-editable="editable(user, { list: " Post ", id: post.id })>
+<div class="post-list-box post" data-ks-editable="editable(user, { list: " Post ", id: post.id })>
 	{% if post.image.exists %}
 	<a href="/blog/post/{{ post.slug }}" class="post-link">
 		<div class="post-list-image" style="background-image:url({{post.image.url}});"></div>
@@ -27,7 +27,7 @@
 		</a>
 	</div>
 	{% endif %}
-	</div>
+</div>
 {% endmacro %}
 {% block content %}
 <div class="container neopraxis-flex-column">
@@ -37,7 +37,7 @@
 	<div class="neopraxis-flex-row blog-list-container">
 		<div class="posts-list-container">
 			{% if data.posts.results.length %}
-				{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
+			{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
 			{% else %}
 			<div class="no-posts-box neopraxis-flex-column">
 				<h3 class="no-posts-text no-margin-text neopraxis-font-montserrat-bold letter-spacing-dot-two slate-green-text">¡Aún no hay publicaciones!</h3>
