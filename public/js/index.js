@@ -16,6 +16,29 @@ $(document).ready(function() {
 			});
 		}
 	});
+	document.querySelector('#neopraxis-hamburger-menu').addEventListener('click', function () {
+		this.classList.toggle('is-active');
+		document.querySelector('#neopraxis-main-navbar').classList.toggle('neopraxis-navbar-style');
+	});
+
+	document.querySelector('#body').addEventListener('click', function (e) {
+		if($(this) != $('a')){
+			console.log(this)
+			if (document.querySelector('#neopraxis-hamburger-menu').classList.contains('is-active') && e.target.tagName !== 'SPAN' && e.target.tagName !== 'A') {
+				document.querySelector('#neopraxis-hamburger-menu').classList.remove('is-active');
+				document.querySelector('#neopraxis-main-navbar').classList.remove('neopraxis-navbar-style');
+			}
+		}
+	});
+	document.querySelector("#body").addEventListener( "touchstart",function (e) {
+		if($(this) != $('a')){
+			console.log(this)
+			if (document.querySelector('#neopraxis-hamburger-menu').classList.contains('is-active') && e.target.tagName !== 'SPAN' && e.target.tagName !== 'A') {
+				document.querySelector('#neopraxis-hamburger-menu').classList.remove('is-active');
+				document.querySelector('#neopraxis-main-navbar').classList.remove('neopraxis-navbar-style');
+			}
+		}
+	});
 	$("#formFree").validate({
 		rules: {
 			name: { required: true, minlength: 2},
@@ -178,23 +201,6 @@ $(document).ready(function() {
 			body.classList.remove('modal-open');
 			$('#myModal').hide();
 			$('body').removeClass('modal-open');
-		}
-	});
-	document.querySelector('#neopraxis-hamburger-menu').addEventListener('click', function () {
-		this.classList.toggle('is-active');
-		document.querySelector('#neopraxis-main-navbar').classList.toggle('neopraxis-navbar-style');
-	});
-
-	document.querySelector('#body').addEventListener('click', function (e) {
-		if (document.querySelector('#neopraxis-hamburger-menu').classList.contains('is-active') && e.target.tagName !== 'SPAN' && e.target.tagName !== 'a') {
-			document.querySelector('#neopraxis-hamburger-menu').classList.remove('is-active');
-			document.querySelector('#neopraxis-main-navbar').classList.remove('neopraxis-navbar-style');
-		}
-	});
-	document.querySelector("#body").addEventListener( "touchstart",function (e) {
-		if (document.querySelector('#neopraxis-hamburger-menu').classList.contains('is-active') && e.target.tagName !== 'SPAN' && e.target.tagName !== 'a') {
-			document.querySelector('#neopraxis-hamburger-menu').classList.remove('is-active');
-			document.querySelector('#neopraxis-main-navbar').classList.remove('neopraxis-navbar-style');
 		}
 	});
 	
