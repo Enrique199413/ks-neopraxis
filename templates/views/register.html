@@ -8,65 +8,65 @@
   <div class="register-title-box">
     <h1 class="register-title neopraxis-font-montserrat-bold white-text no-margin-text letter-spacing-dot-two">Registro</h1>
   </div>
-  <form>
+  <form id="register">
     <div class="register-form-box neopraxis-flex-column">
       <div class="register-input-box">
-        <input type="text" name="" value="" placeholder="Nombre y apellido" class="register-input neopraxis-font-myriadpro-light">
+        <input type="text" name="name" value="" placeholder="Nombre y apellido" class="register-input neopraxis-font-myriadpro-light">
       </div>
       <div class="register-input-box">
-        <input type="text" name="" value="" placeholder="Correo electrónico" class="register-input neopraxis-font-myriadpro-light">
+        <input type="text" name="email" value="" placeholder="Correo electrónico" class="register-input neopraxis-font-myriadpro-light">
       </div>
       <div class="register-input-box">
-        <input type="text" name="" value="" placeholder="Teléfono" class="register-input neopraxis-font-myriadpro-light">
+        <input type="text" name="phone" value="" placeholder="Teléfono" class="register-input neopraxis-font-myriadpro-light">
       </div>
       <div class="register-input-box register-padding-password">
-        <input type="text" name="" value="" placeholder="Contraseña" class="register-input neopraxis-font-myriadpro-light">
+        <input type="password" name="password" id="password" value="" placeholder="Contraseña" class="register-input neopraxis-font-myriadpro-light">
       </div>
       <div class="register-input-box">
-        <input type="text" name="" value="" placeholder="Confirmar contraseña" class="register-input neopraxis-font-myriadpro-light">
+        <input type="password" name="confirmPassword" id="confirmPassword" value="" placeholder="Confirmar contraseña" class="register-input neopraxis-font-myriadpro-light">
       </div>
       <button type="submit" class="register-send-btn uppercase neopraxis-font-montserrat-regular white-text cursor-pointer hover-green" id="registerBtn">Registrarme</button>
     </div>
   </form>
 </div>
 <div id="registerModal" class="modal">
-<!-- Modal content -->
-<div class="modal-content cierralo-flex-colum">
-  <div class="modal-close-btn-container cursos-pointer" id="registerClose">
-    <span class="close"><img src="/images/icons/close-modal.png" class="close-modal-img"></span>
-  </div>
-  <div class="modal-header register-modal-header neopraxis-flex-column">
-    <div class="modal-title-box">
-      <p class="modal-title no-margin-text slate-green-text letter-spacing-dot-two inline-block neopraxis-font-myriadpro-regular">¡Bienvenido a </p>
-      <img src="/images/icons/neopraxis-logo-png@3x.png" class="modal-title-logo register-logo inline-block">
-      <p class="modal-title no-margin-text slate-green-text letter-spacing-dot-two inline-block neopraxis-font-myriadpro-regular"> !</p>
+  <!-- Modal content -->
+  <div class="modal-content cierralo-flex-colum">
+    <div class="modal-close-btn-container cursos-pointer" id="registerClose">
+      <span class="close"><img src="/images/icons/close-modal.png" class="close-modal-img"></span>
     </div>
-    <div class="modal-gold-divider"></div>
-  </div>
-  <div class="modal-body neopraxis-flex-column">
-    <p class="modal-subtitle no-margin-text warm-grey-text letter-spacing-dot-one neopraxis-font-myriadpro-regular">Para poder utilizar el sistema de reservación, es necesario que tus datos sean validados<br><br>Te contactaremos lo más pronto posible</p>
-    <form id="formFree" accept-charset="utf-8">
-      <div class="contact-body-modal-container neopraxis-flex-column">
-        <input type="text" name="free" hidden>
-        <div class="contact-input-box-textarea">
-          <textarea name="message" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
-        </div>
-        <div class="contact-checkbox-box contact-checkbox-box-modal neopraxis-flex-row">
-          <input type="checkbox" name="contactByMail" value="" class="contact-checkbox inline-block cursor-pointer">
-          <p class="neopraxis-font-myriadpro-light warm-grey-text contact-way-text no-margin-text">Quiero que me contacten por correo</p>
-        </div>
-        <div class="contact-checkbox-box contact-checkbox-box-modal neopraxis-flex-row">
-          <input type="checkbox" name="contactByPhone" value="" class="contact-checkbox inline-block cursor-pointer">
-          <p class="neopraxis-free-font neopraxis-font-myriadpro-light warm-grey-text contact-way-text no-margin-text">Quiero que me contacten por teléfono</p>
-        </div>
-        <p id="textForm" class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text" style="text-align: center;">Nos pondremos en contacto contigo, gracias.</p>
-        <div class="contact-last-button-container neopraxis-flex-column">
-          <button type="submit" class="white-text neopraxis-font-montserrat-regular contact-btn cursor-pointer hover-green letter-spacing-dot-six">ENVIAR</button>
-        </div>
+    <div class="modal-header register-modal-header neopraxis-flex-column">
+      <div class="modal-title-box">
+        <p class="modal-title no-margin-text slate-green-text letter-spacing-dot-two inline-block neopraxis-font-myriadpro-regular">¡Bienvenido a </p>
+        <img src="/images/icons/neopraxis-logo-png@3x.png" class="modal-title-logo register-logo inline-block">
+        <p class="modal-title no-margin-text slate-green-text letter-spacing-dot-two inline-block neopraxis-font-myriadpro-regular"> !</p>
       </div>
-    </form>
+      <div class="modal-gold-divider"></div>
+    </div>
+    <div class="modal-body neopraxis-flex-column">
+      <p class="modal-subtitle no-margin-text warm-grey-text letter-spacing-dot-one neopraxis-font-myriadpro-regular">Para poder utilizar el sistema de reservación, es necesario que tus datos sean validados<br><br>Te contactaremos lo más pronto posible</p>
+      <form id="formFree" accept-charset="utf-8">
+        <div class="contact-body-modal-container neopraxis-flex-column">
+          <input type="text" name="free" hidden>
+          <div class="contact-input-box-textarea">
+            <textarea name="message" class="contact-input landing neopraxis-font-myriadpro-light warm-grey" placeholder="Mensaje (Opcional)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mensaje (Opcional)'"></textarea>
+          </div>
+          <div class="contact-checkbox-box contact-checkbox-box-modal neopraxis-flex-row">
+            <input type="checkbox" name="contactByMail" value="" class="contact-checkbox inline-block cursor-pointer">
+            <p class="neopraxis-font-myriadpro-light warm-grey-text contact-way-text no-margin-text">Quiero que me contacten por correo</p>
+          </div>
+          <div class="contact-checkbox-box contact-checkbox-box-modal neopraxis-flex-row">
+            <input type="checkbox" name="contactByPhone" value="" class="contact-checkbox inline-block cursor-pointer">
+            <p class="neopraxis-free-font neopraxis-font-myriadpro-light warm-grey-text contact-way-text no-margin-text">Quiero que me contacten por teléfono</p>
+          </div>
+          <p id="textForm" class="neopraxis-font-myriadpro-light warm-grey contact-way-text no-margin-text" style="text-align: center;">Nos pondremos en contacto contigo, gracias.</p>
+          <div class="contact-last-button-container neopraxis-flex-column">
+            <button type="submit" class="white-text neopraxis-font-montserrat-regular contact-btn cursor-pointer hover-green letter-spacing-dot-six" id="sendRegister">ENVIAR</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 </div>
 <script type="text/javascript">
 </script>
