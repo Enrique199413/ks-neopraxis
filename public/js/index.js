@@ -60,7 +60,6 @@ $(document).ready(function() {
 			email: 'Este campo es olbigatorio',
 		},
 	});
-
 	$("#formDataIndex").validate({
 		rules: {
 			name: { required: true, minlength: 2},
@@ -231,11 +230,29 @@ span.onclick = function() {
 var registerModal = document.getElementById('registerModal');
 var registerBtn = document.getElementById("registerBtn");
 var registerClose = document.getElementById('registerClose');
-registerBtn.onclick = function(e) {
-	e.preventDefault();
-	registerModal.classList.add('modal-open');
-	body.classList.add('modal-open');
-}
+$("#register").validate({
+		rules: {
+			name: { required: true, minlength: 2},
+			email: { required:true, email: true},
+			phone: { required:true, number: true, minlength: 8},
+			password: { required:true, minlength: 2},
+			confirmPassword: { required:true, minlength: 2, equalTo: '#password'},
+		},
+		messages: {
+			name: 'Este campo es olbigatorio',
+			email: 'Este campo es olbigatorio',
+			phone: 'Este campo es olbigatorio',
+			password: 'Este campo es olbigatorio',
+			confirmPassword: 'Este campo es olbigatorio',
+		},
+		submitHandler: function (form) {
+	        registerModal.classList.add('modal-open');
+			body.classList.add('modal-open');
+			$('#sendRegister').click(function () {
+	            form.submit();
+	       });
+	    }
+	});
 registerClose.onclick = function() {
 	console.log('kkk')
 	registerModal.classList.remove('modal-open');
